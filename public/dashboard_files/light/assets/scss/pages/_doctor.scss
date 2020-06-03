@@ -1,0 +1,35 @@
+﻿.doctor{    
+    .detail{
+        @extend .m-t-10;
+        .social-links{
+            li{
+                @extend .inlineblock;
+                a{
+                    color: $grey-900;
+                    padding: 0 5px;
+                }
+            }
+        }
+    }
+    &.member-card{        
+        .member-thumb {
+            border-bottom: 2px solid $white;
+            img{
+                filter: gray;
+                -webkit-filter: grayscale(1);
+                -webkit-transition: all .8s ease-in-out;
+            }
+        }
+        &:hover{
+            .member-thumb{
+                img{
+                    filter: none;
+                    -webkit-transition: all .8s ease-in-out;
+                }
+            }
+        }
+    }
+}
+.member-card{
+    overflow: hidden;
+}

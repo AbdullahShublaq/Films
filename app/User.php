@@ -2,13 +2,15 @@
 
 namespace App;
 
-use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Support\Facades\Storage;
 
 class User extends Authenticatable
 {
     use Notifiable;
+
+    protected $appends = ['full_name'];
 
     /**
      * The attributes that are mass assignable.
@@ -16,7 +18,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'username', 'first_name', 'last_name', 'email', 'avatar', 'password',
     ];
 
     /**
@@ -36,4 +38,25 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    protected static function booted()
+    {
+        // When the client is being deleted, delete the avatar as well.
+        static::deleting(function (User $user) {
+            $attributes = $user->getAttributes();
+            if (isset($attributes['avatar']) && $attributes['avatar']) {
+                Storage::delete($attributes['avatar']);
+            }
+        });
+    }
+
+    public function getAvatarAttribute($value)
+    {
+        return asset($value ? 'storage/' . $value : '/images/default.png');
+    }
+
+    public function getFullNameAttribute()
+    {
+        return $this->first_name . " " . $this->last_name;
+    }
 }

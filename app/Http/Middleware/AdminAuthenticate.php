@@ -22,6 +22,6 @@ class AdminAuthenticate
             return $next($request);
         }
 
-        return redirect('admin/login');
+        return redirect('dashboard/login');
     }
 }
