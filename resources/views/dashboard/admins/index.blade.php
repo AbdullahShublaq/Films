@@ -15,14 +15,22 @@
                     </h2>
                 </div>
                 <div class="col-lg-5 col-md-7 col-sm-12">
-                    <a href="{{route('dashboard.admins.create')}}">
-                        <button class="btn btn-primary btn-icon btn-round d-none d-md-inline-block float-right m-l-10"
+                    @if(auth()->guard('admin')->user()->hasPermission('create_admins'))
+                        <a href="{{route('dashboard.admins.create')}}">
+                            <button class="btn btn-primary btn-icon btn-round d-none d-md-inline-block float-right m-l-10"
+                                    type="button">
+                                <i class="zmdi zmdi-plus"></i>
+                            </button>
+                        </a>
+                    @else
+                        <button class="btn btn-primary btn-icon btn-round d-none d-md-inline-block float-right m-l-10 disabled"
+                                style="cursor: no-drop"
                                 type="button">
                             <i class="zmdi zmdi-plus"></i>
                         </button>
-                    </a>
+                    @endif
                     <ul class="breadcrumb float-md-right">
-                        <li class="breadcrumb-item"><a href="index.html"><i class="zmdi zmdi-home"></i> Films</a></li>
+                        <li class="breadcrumb-item"><a href="{{url('dashboard')}}"><i class="zmdi zmdi-home"></i> Films</a></li>
                         <li class="breadcrumb-item"><a href="javascript:void(0);">Admins</a></li>
                         <li class="breadcrumb-item active">All Admins</li>
                     </ul>
@@ -74,22 +82,40 @@
                                                 <td><span class="list-name">{{$admin->name}}</span></td>
                                                 <td>{{$admin->email}}</td>
                                                 <td>
-                                                    <a href="{{route('dashboard.admins.edit', $admin->id)}}">
-                                                        <button class="btn btn-icon btn-neutral btn-icon-mini"
+                                                    @if(auth()->guard('admin')->user()->hasPermission('update_admins'))
+                                                        <a href="{{route('dashboard.admins.edit', $admin->id)}}">
+                                                            <button class="btn btn-icon btn-neutral btn-icon-mini"
+                                                                    title="Edit">
+                                                                <i class="zmdi zmdi-edit"></i>
+                                                            </button>
+                                                        </a>
+                                                    @else
+                                                        <button class="btn btn-icon btn-neutral btn-icon-mini disabled"
+                                                                style="cursor: no-drop"
                                                                 title="Edit">
                                                             <i class="zmdi zmdi-edit"></i>
                                                         </button>
-                                                    </a>
-                                                    <form action="{{ route('dashboard.admins.destroy', $admin) }}" method="POST" style="display: inline-block">
-                                                        @csrf
-                                                        @method('DELETE')
+                                                    @endif
 
-                                                        <button type="submit"
-                                                                class="btn btn-icon btn-neutral btn-icon-mini remove_admin"
-                                                                title="Delete" value="{{$admin->id}}">
+                                                    @if(auth()->guard('admin')->user()->hasPermission('delete_admins'))
+                                                        <form action="{{ route('dashboard.admins.destroy', $admin) }}"
+                                                              method="POST" style="display: inline-block">
+                                                            @csrf
+                                                            @method('DELETE')
+
+                                                            <button type="submit"
+                                                                    class="btn btn-icon btn-neutral btn-icon-mini remove_admin"
+                                                                    title="Delete" value="{{$admin->id}}">
+                                                                <i class="zmdi zmdi-delete"></i>
+                                                            </button>
+                                                        </form>
+                                                    @else
+                                                        <button class="btn btn-icon btn-neutral btn-icon-mini remove_admin disabled"
+                                                                style="cursor: no-drop"
+                                                                title="Delete">
                                                             <i class="zmdi zmdi-delete"></i>
                                                         </button>
-                                                    </form>
+                                                    @endif
                                                 </td>
                                             </tr>
                                         @empty

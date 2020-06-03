@@ -15,14 +15,22 @@
                     </h2>
                 </div>
                 <div class="col-lg-5 col-md-7 col-sm-12">
-                    <a href="{{route('dashboard.clients.create')}}">
-                        <button class="btn btn-primary btn-icon btn-round d-none d-md-inline-block float-right m-l-10"
+                    @if(auth()->guard('admin')->user()->hasPermission('create_clients'))
+                        <a href="{{route('dashboard.clients.create')}}">
+                            <button class="btn btn-primary btn-icon btn-round d-none d-md-inline-block float-right m-l-10"
+                                    type="button">
+                                <i class="zmdi zmdi-plus"></i>
+                            </button>
+                        </a>
+                    @else
+                        <button class="btn btn-primary btn-icon btn-round d-none d-md-inline-block float-right m-l-10 disabled"
+                                style="cursor: no-drop"
                                 type="button">
                             <i class="zmdi zmdi-plus"></i>
                         </button>
-                    </a>
+                    @endif
                     <ul class="breadcrumb float-md-right">
-                        <li class="breadcrumb-item"><a href="index.html"><i class="zmdi zmdi-home"></i> Films</a></li>
+                        <li class="breadcrumb-item"><a href="{{url('dashboard')}}"><i class="zmdi zmdi-home"></i> Films</a></li>
                         <li class="breadcrumb-item"><a href="javascript:void(0);">Clients</a></li>
                         <li class="breadcrumb-item active">All Clients</li>
                     </ul>
@@ -56,7 +64,8 @@
                                         <tr>
                                             <th>Avatar</th>
                                             <th>UserName</th>
-                                            <th>FullName</th>
+                                            <th>FirstName</th>
+                                            <th>LastName</th>
                                             <th>Email</th>
                                             <th>Actions</th>
                                         </tr>
@@ -73,25 +82,44 @@
                                                     </span>
                                                 </td>
                                                 <td><span class="list-name">{{$client->username}}</span></td>
-                                                <td>{{$client->full_name}}</td>
+                                                <td>{{$client->first_name}}</td>
+                                                <td>{{$client->last_name}}</td>
                                                 <td>{{$client->email}}</td>
                                                 <td>
-                                                    <a href="{{route('dashboard.clients.edit', $client->id)}}">
-                                                        <button class="btn btn-icon btn-neutral btn-icon-mini"
+                                                    @if(auth()->guard('admin')->user()->hasPermission('update_clients'))
+                                                        <a href="{{route('dashboard.clients.edit', $client->id)}}">
+                                                            <button class="btn btn-icon btn-neutral btn-icon-mini"
+                                                                    title="Edit">
+                                                                <i class="zmdi zmdi-edit"></i>
+                                                            </button>
+                                                        </a>
+                                                    @else
+                                                        <button class="btn btn-icon btn-neutral btn-icon-mini disabled"
+                                                                style="cursor: no-drop"
                                                                 title="Edit">
                                                             <i class="zmdi zmdi-edit"></i>
                                                         </button>
-                                                    </a>
-                                                    <form action="{{ route('dashboard.clients.destroy', $client) }}" method="POST" style="display: inline-block">
-                                                        @csrf
-                                                        @method('DELETE')
+                                                    @endif
 
-                                                        <button type="submit"
-                                                                class="btn btn-icon btn-neutral btn-icon-mini remove_client"
-                                                                title="Delete" value="{{$client->id}}">
+                                                    @if(auth()->guard('admin')->user()->hasPermission('delete_clients'))
+                                                        <form action="{{ route('dashboard.clients.destroy', $client) }}"
+                                                              method="POST" style="display: inline-block">
+                                                            @csrf
+                                                            @method('DELETE')
+
+                                                            <button type="submit"
+                                                                    class="btn btn-icon btn-neutral btn-icon-mini remove_client"
+                                                                    title="Delete" value="{{$client->id}}">
+                                                                <i class="zmdi zmdi-delete"></i>
+                                                            </button>
+                                                        </form>
+                                                    @else
+                                                        <button class="btn btn-icon btn-neutral btn-icon-mini remove_admin disabled"
+                                                                style="cursor: no-drop"
+                                                                title="Delete">
                                                             <i class="zmdi zmdi-delete"></i>
                                                         </button>
-                                                    </form>
+                                                    @endif
                                                 </td>
                                             </tr>
                                         @empty

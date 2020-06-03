@@ -55,7 +55,7 @@
                 </div>
             </div>
 
-            awdawd
+
         </div>
     </section>
 @endsection

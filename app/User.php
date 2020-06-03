@@ -10,8 +10,6 @@ class User extends Authenticatable
 {
     use Notifiable;
 
-    protected $appends = ['full_name'];
-
     /**
      * The attributes that are mass assignable.
      *
@@ -55,8 +53,4 @@ class User extends Authenticatable
         return asset($value ? 'storage/' . $value : '/images/default.png');
     }
 
-    public function getFullNameAttribute()
-    {
-        return $this->first_name . " " . $this->last_name;
-    }
 }

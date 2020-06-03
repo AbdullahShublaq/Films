@@ -109,7 +109,7 @@
                                 </div>
 
                                 @php
-                                    $models = ['admins', 'users'];
+                                    $models = ['admins', 'clients'];
                                     $cruds = ['create', 'read', 'update', 'delete'];
                                 @endphp
 
@@ -124,7 +124,6 @@
                                     </ul>
                                 </div>
                                 <div class="row clearfix" style="margin-left: 10px">
-
                                     <div class="tab-content">
                                         @foreach($models as $index=>$model)
                                             <div class="tab-pane fade show {{ $index==0 ? 'active' : '' }}" id="{{ $model }}" >
@@ -138,24 +137,6 @@
                                                 </div>
                                             </div>
                                         @endforeach
-                                        <div class="tab-pane fade" id="profile" role="tabpanel"
-                                             aria-labelledby="profile-tab">
-                                            <div class="checkbox">
-                                                <input id="checkbox1" type="checkbox">
-                                                <label for="checkbox1">
-                                                    Unchecked
-                                                </label>
-                                            </div>
-                                        </div>
-                                        <div class="tab-pane fade" id="contact" role="tabpanel"
-                                             aria-labelledby="contact-tab">
-                                            <div class="checkbox">
-                                                <input id="checkbox1" type="checkbox">
-                                                <label for="checkbox1">
-                                                    Unchecked
-                                                </label>
-                                            </div>
-                                        </div>
                                     </div>
                                 </div>
 

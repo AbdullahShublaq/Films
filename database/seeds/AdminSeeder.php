@@ -11,10 +11,12 @@ class AdminSeeder extends Seeder
      */
     public function run()
     {
-        \App\Admin::create([
-            'name'      => 'Admin',
-            'email'     => 'admin@app.com',
+        $admin = \App\Admin::create([
+            'name'      => 'Super Admin',
+            'email'     => 'super_admin@app.com',
             'password'  => bcrypt(123456)
         ]);
+
+        $admin->attachRole('super_admin');
     }
 }

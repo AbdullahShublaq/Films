@@ -16,10 +16,19 @@ class AdminController extends Controller
      * @param Request $request
      * @return \Illuminate\Http\Response
      */
+
+    public function __construct()
+    {
+        $this->middleware(['permission:create_admins,guard:admin'])->only(['create', 'store']);
+        $this->middleware(['permission:read_admins,guard:admin'])->only('index');
+        $this->middleware(['permission:update_admins,guard:admin'])->only(['edit', 'update']);
+        $this->middleware(['permission:deletes_admins,guard:admin'])->only('destroy');
+    }
+
     public function index(Request $request)
     {
         //
-        $admins = Admin::where(function ($query) use ($request) {
+        $admins = Admin::whereRoleIs('admin')->where(function ($query) use ($request) {
             $query->when($request->search, function ($q) use ($request) {
                 return $q->where('name', 'like', '%' . $request->search . '%')
                     ->orWhere('email', 'like', '%' . $request->search . '%');
@@ -54,18 +63,21 @@ class AdminController extends Controller
             'email' => 'required|email|string|unique:admins',
             'avatar' => 'image',
             'password' => 'required|string|confirmed|min:6',
+            'permissions' => 'required|min:1'
         ]);
 
         if ($request->avatar) {
             $attributes['avatar'] = $request->avatar->store('admin_avatars');
         }
 
-        $result = Admin::create([
+        $admin = Admin::create([
             'name' => $attributes['name'],
             'email' => $attributes['email'],
             'password' => bcrypt($attributes['password']),
             'avatar' => $attributes['avatar'] ?? NULL
         ]);
+        $admin->attachRole('admin');
+        $admin->syncPermissions($attributes['permissions']);
 
         session()->flash('success', 'Admin Added Successfully');
         return redirect()->route('dashboard.admins.index');
@@ -91,6 +103,9 @@ class AdminController extends Controller
     public function edit(Admin $admin)
     {
         //
+        if (!auth()->guard('admin')->user()->hasRole('super_admin') && $admin->hasRole('super_admin')) {
+            abort('403');
+        }
         return view('dashboard.admins.edit', compact('admin'));
     }
 
@@ -104,11 +119,16 @@ class AdminController extends Controller
     public function update(Request $request, Admin $admin)
     {
         //
+        if (!auth()->guard('admin')->user()->hasRole('super_admin') && $admin->hasRole('super_admin')) {
+            abort('403');
+        }
+
         $attributes = $request->validate([
             'name' => 'required|string|max:20|min:5',
             'email' => ['required', 'email', 'string', Rule::unique('admins')->ignore($admin)],
             'avatar' => 'image',
             'password' => 'nullable|string|confirmed|min:6',
+            'permissions' => 'required|min:1'
         ]);
 
         if ($request->avatar) {
@@ -126,6 +146,7 @@ class AdminController extends Controller
         }
 
         $admin->update($attributes);
+        $admin->syncPermissions($attributes['permissions']);
 
         session()->flash('success', 'Admin Updated Successfully');
         return redirect()->route('dashboard.admins.index');

@@ -16,6 +16,15 @@ class ClientController extends Controller
      * @param Request $request
      * @return \Illuminate\Http\Response
      */
+
+    public function __construct()
+    {
+        $this->middleware(['permission:create_clients,guard:admin'])->only(['create', 'store']);
+        $this->middleware(['permission:read_clients,guard:admin'])->only('index');
+        $this->middleware(['permission:update_clients,guard:admin'])->only(['edit', 'update']);
+        $this->middleware(['permission:deletes_clients,guard:admin'])->only('destroy');
+    }
+
     public function index(Request $request)
     {
         //

@@ -109,11 +109,38 @@
                                     <h2>Permission Information</h2>
                                 </div>
 
-                                <div class="row clearfix">
+                                @php
+                                    $models = ['admins', 'clients'];
+                                    $cruds = ['create', 'read', 'update', 'delete'];
+                                @endphp
 
+                                <div class="row clearfix">
+                                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                        @foreach($models as $index=>$model)
+                                            <li class="nav-item">
+                                                <a class="nav-link {{$index==0 ? 'active' : ''}}" data-toggle="tab" href="#{{$model}}"
+                                                   role="tab" aria-controls="home" aria-selected="true">{{$model}}</a>
+                                            </li>
+                                        @endforeach
+                                    </ul>
+                                </div>
+                                <div class="row clearfix" style="margin-left: 10px">
+                                    <div class="tab-content">
+                                        @foreach($models as $index=>$model)
+                                            <div class="tab-pane fade show {{ $index==0 ? 'active' : '' }}" id="{{ $model }}" >
+                                                <div class="checkbox">
+                                                    @foreach($cruds as $crud)
+                                                        <input {{$admin->hasPermission($crud . '_' . $model) ? 'checked' : ''}} id="{{$crud . '_' . $model }}" type="checkbox" name="permissions[]" value="{{$crud . '_' . $model }}">
+                                                        <label style="margin-left: 10px" for="{{$crud . '_' . $model }}">
+                                                            {{$crud}}
+                                                        </label>
+                                                    @endforeach
+                                                </div>
+                                            </div>
+                                        @endforeach
+                                    </div>
                                 </div>
 
-                                <br>
                                 <br>
 
                                 <div class="row clearfix">
