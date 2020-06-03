@@ -1,9 +1,9 @@
 <!-- Left Sidebar -->
 <aside id="leftsidebar" class="sidebar">
     <ul class="nav nav-tabs">
-        <li class="nav-item"><a class="nav-link active" data-toggle="tab" href=""><i
+        <li class="nav-item"><a class="nav-link active" href=""><i
                         class="zmdi zmdi-home m-r-5"></i>Films</a></li>
-        <li class="nav-item"><a class="nav-link" data-toggle="tab" href=""><i class="zmdi zmdi-account-box m-r-5"></i>Profile</a>
+        <li class="nav-item"><a class="nav-link active" href="{{route('dashboard.admins.edit', auth()->guard('admin')->user())}}"><i class="zmdi zmdi-account-box m-r-5"></i>Profile</a>
         </li>
     </ul>
     <div class="tab-content">
@@ -13,7 +13,7 @@
                     <li>
                         <div class="user-info">
                             <div class="image"><a href=""><img
-                                            src="{{auth()->guard('admin')->user()->image}}"
+                                            src="{{auth()->guard('admin')->user()->avatar}}"
                                             alt="User"></a></div>
                             <div class="detail">
                                 <h4>{{auth()->guard('admin')->user()->name}}</h4>
