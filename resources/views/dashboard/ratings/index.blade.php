@@ -55,11 +55,11 @@
                                         </select>
                                     </div>
                                     <div class="col-3">
-                                        <select name="rate" class="form-control z-index show-tick"
+                                        <select name="rating" class="form-control z-index show-tick"
                                                 data-live-search="true">
-                                            <option value="" selected>-All Rates-</option>
+                                            <option value="" selected>-All Ratings-</option>
                                             @for($i = 1; $i <= 10; $i++)
-                                                <option value="{{$i}}" {{request()->rate == $i ? 'selected' : ''}}>{{$i}}</option>
+                                                <option value="{{$i}}" {{request()->rating == $i ? 'selected' : ''}}>{{$i}}</option>
                                             @endfor
                                         </select>
                                     </div>

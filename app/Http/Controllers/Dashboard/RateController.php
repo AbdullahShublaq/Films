@@ -38,8 +38,8 @@ class RateController extends Controller
                         $q2->whereIn('id', (array)$request->film);
                     });
                 });
-                $query->when($request->rate, function ($q) use ($request) {
-                    return $q->where('rate', (array)$request->rate);
+                $query->when($request->rating, function ($q) use ($request) {
+                    return $q->where('rating', (array)$request->rating);
                 });
             })
             ->latest()->paginate(10);
