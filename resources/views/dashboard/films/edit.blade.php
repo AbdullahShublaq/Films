@@ -21,7 +21,7 @@
                         <li class="breadcrumb-item"><a href="{{ url('dashboard') }}"><i class="zmdi zmdi-home"></i>
                                 Films</a></li>
                         <li class="breadcrumb-item"><a href="javascript:void(0);">Films</a></li>
-                        <li class="breadcrumb-item active">Film</li>
+                        <li class="breadcrumb-item active">Edit</li>
                     </ul>
                 </div>
             </div>

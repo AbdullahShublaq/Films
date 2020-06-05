@@ -19,7 +19,7 @@
                         <li class="breadcrumb-item"><a href="{{ url('dashboard') }}"><i class="zmdi zmdi-home"></i>
                                 Films</a></li>
                         <li class="breadcrumb-item"><a href="javascript:void(0);">Categories</a></li>
-                        <li class="breadcrumb-item active">Category</li>
+                        <li class="breadcrumb-item active">Edit</li>
                     </ul>
                 </div>
             </div>
@@ -29,7 +29,7 @@
                 <div class="col-md-12">
                     <div class="card">
                         <div class="header">
-                            <h2><strong>Add</strong> Categories</h2>
+                            <h2><strong>Edit</strong> Categories</h2>
                         </div>
 
                         <div class="body">
