@@ -79,25 +79,25 @@
                                         </tr>
                                         </thead>
                                         <tbody>
-                                        @forelse($ratings as $rate)
+                                        @forelse($ratings as $rating)
                                             <tr>
                                                 <td>
-                                                    <a href="{{route('dashboard.clients.index', ['search' => $rate->user->username])}}">{{$rate->user->username}}</a>
+                                                    <a href="{{route('dashboard.clients.index', ['search' => $rating->user->username])}}">{{$rating->user->username}}</a>
                                                 </td>
                                                 <td>
-                                                    <a href="{{route('dashboard.films.index', ['search' => $rate->film->name])}}">{{$rate->film->name}}</a>
+                                                    <a href="{{route('dashboard.films.index', ['search' => $rating->film->name])}}">{{$rating->film->name}}</a>
                                                 </td>
-                                                <td><i class="zmdi zmdi-star"></i> {{$rate->rate}}</td>
+                                                <td><i class="zmdi zmdi-star"></i> {{$rating->rating}}</td>
                                                 <td>
                                                     @if(auth()->guard('admin')->user()->hasPermission('delete_ratings'))
-                                                        <form action="{{ route('dashboard.ratings.destroy', $rate->id) }}"
+                                                        <form action="{{ route('dashboard.ratings.destroy', $rating) }}"
                                                               method="POST" style="display: inline-block">
                                                             @csrf
                                                             @method('DELETE')
 
                                                             <button type="submit"
                                                                     class="btn btn-icon btn-neutral btn-icon-mini remove_rate"
-                                                                    title="Delete" value="{{$rate->id}}">
+                                                                    title="Delete" value="{{$rating->id}}">
                                                                 <i class="zmdi zmdi-delete"></i>
                                                             </button>
                                                         </form>

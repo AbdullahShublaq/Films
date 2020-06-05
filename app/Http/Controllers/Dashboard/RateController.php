@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Dashboard;
 
 use App\Film;
 use App\Http\Controllers\Controller;
-use App\Rate;
+use App\Rating;
 use App\User;
 use Illuminate\Http\Request;
 
@@ -26,7 +26,7 @@ class RateController extends Controller
     public function index(Request $request)
     {
         //
-        $ratings = Rate::with('user')->with('film')
+        $ratings = Rating::with('user')->with('film')
             ->where(function ($query) use ($request) {
                 $query->when($request->client, function ($q) use ($request) {
                     return $q->whereHas('user', function ($q2) use ($request) {
@@ -73,10 +73,10 @@ class RateController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Rate $rate
+     * @param  \App\Rating $rate
      * @return \Illuminate\Http\Response
      */
-    public function show(Rate $rate)
+    public function show(Rating $rate)
     {
         //
     }
@@ -84,10 +84,10 @@ class RateController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Rate $rate
+     * @param  \App\Rating $rate
      * @return \Illuminate\Http\Response
      */
-    public function edit(Rate $rate)
+    public function edit(Rating $rate)
     {
         //
     }
@@ -96,10 +96,10 @@ class RateController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request $request
-     * @param  \App\Rate $rate
+     * @param  \App\Rating $rate
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Rate $rate)
+    public function update(Request $request, Rating $rate)
     {
         //
     }
@@ -109,12 +109,12 @@ class RateController extends Controller
      *
      * @param $id
      * @return \Illuminate\Http\Response
+     * @throws \Exception
      */
-    public function destroy($id)
+    public function destroy(Rating $rating)
     {
         //
-        $rate = Rate::findOrFail($id);
-        $rate->delete();
+        $rating->delete();
 
         session()->flash('success', 'Rate Deleted Successfully');
         return redirect()->route('dashboard.ratings.index');
