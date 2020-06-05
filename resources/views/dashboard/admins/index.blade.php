@@ -83,7 +83,7 @@
                                                 <td>{{$admin->email}}</td>
                                                 <td>
                                                     @if(auth()->guard('admin')->user()->hasPermission('update_admins'))
-                                                        <a href="{{route('dashboard.admins.edit', $admin->id)}}">
+                                                        <a href="{{route('dashboard.admins.edit', $admin)}}">
                                                             <button class="btn btn-icon btn-neutral btn-icon-mini"
                                                                     title="Edit">
                                                                 <i class="zmdi zmdi-edit"></i>
@@ -110,7 +110,7 @@
                                                             </button>
                                                         </form>
                                                     @else
-                                                        <button class="btn btn-icon btn-neutral btn-icon-mini remove_admin disabled"
+                                                        <button class="btn btn-icon btn-neutral btn-icon-mini disabled"
                                                                 style="cursor: no-drop"
                                                                 title="Delete">
                                                             <i class="zmdi zmdi-delete"></i>

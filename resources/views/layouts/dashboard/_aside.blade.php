@@ -51,6 +51,33 @@
                             </ul>
                         </li>
                     @endif
+
+                    @if(auth()->guard('admin')->user()->hasPermission('read_categories'))
+                        <li>
+                            <a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-view-list"></i><span>Categories</span>
+                            </a>
+                            <ul class="ml-menu">
+                                <li><a href="{{route('dashboard.categories.index')}}">All Categories</a></li>
+                                @if(auth()->guard('admin')->user()->hasPermission('create_categories'))
+                                    <li><a href="{{route('dashboard.categories.create')}}">Add Categories</a></li>
+                                @endif
+                            </ul>
+                        </li>
+                    @endif
+
+                    @if(auth()->guard('admin')->user()->hasPermission('read_films'))
+                        <li>
+                            <a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-movie"></i><span>Films</span>
+                            </a>
+                            <ul class="ml-menu">
+                                <li><a href="{{route('dashboard.films.index')}}">All Films</a></li>
+                                @if(auth()->guard('admin')->user()->hasPermission('create_films'))
+                                    <li><a href="{{route('dashboard.films.create')}}">Add Films</a></li>
+                                @endif
+                            </ul>
+                        </li>
+                    @endif
+
                 </ul>
             </div>
         </div>

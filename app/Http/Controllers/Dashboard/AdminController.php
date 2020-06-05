@@ -10,21 +10,21 @@ use Illuminate\Validation\Rule;
 
 class AdminController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @param Request $request
-     * @return \Illuminate\Http\Response
-     */
 
     public function __construct()
     {
         $this->middleware(['permission:create_admins,guard:admin'])->only(['create', 'store']);
         $this->middleware(['permission:read_admins,guard:admin'])->only('index');
         $this->middleware(['permission:update_admins,guard:admin'])->only(['edit', 'update']);
-        $this->middleware(['permission:deletes_admins,guard:admin'])->only('destroy');
+        $this->middleware(['permission:delete_admins,guard:admin'])->only('destroy');
     }
 
+    /**
+     * Display a listing of the resource.
+     *
+     * @param Request $request
+     * @return \Illuminate\Http\Response
+     */
     public function index(Request $request)
     {
         //

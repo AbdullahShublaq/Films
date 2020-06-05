@@ -15,6 +15,8 @@ Route::group(['prefix' => 'dashboard', 'namespace' => 'Dashboard'], function () 
         Route::get('/', 'HomeController@index')->name('home');
         Route::resource('admins', 'AdminController')->except(['show']);
         Route::resource('clients', 'ClientController')->except(['show']);
+        Route::resource('films', 'FilmController')->except(['show']);
+        Route::resource('categories', 'CategoryController')->except(['show']);
 
     });
 });

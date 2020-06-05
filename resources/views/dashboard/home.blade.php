@@ -38,16 +38,16 @@
                             </li>
                             <li class="col-lg-3 col-md-3 col-6">
                                 <div class="body">
-                                    <i class="zmdi zmdi-comment-text col-red"></i>
-                                    <h4>65</h4>
-                                    <span>Comments</span>
+                                    <i class="zmdi zmdi-view-list col-brown"></i>
+                                    <h4>{{$categories}}</h4>
+                                    <span>Categories</span>
                                 </div>
                             </li>
                             <li class="col-lg-3 col-md-3 col-6">
                                 <div class="body">
-                                    <i class="zmdi zmdi-account text-success"></i>
-                                    <h4>2,055</h4>
-                                    <span>Profile Views</span>
+                                    <i class="zmdi zmdi-movie col-red"></i>
+                                    <h4>{{$films}}</h4>
+                                    <span>Films</span>
                                 </div>
                             </li>
                         </ul>

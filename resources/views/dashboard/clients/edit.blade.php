@@ -10,7 +10,7 @@
         <div class="block-header">
             <div class="row">
                 <div class="col-lg-7 col-md-5 col-sm-12">
-                    <h2>Add Client
+                    <h2>Edit Client
                         <small>Welcome to Films</small>
                     </h2>
                 </div>
@@ -19,7 +19,7 @@
                         <li class="breadcrumb-item"><a href="{{ url('dashboard') }}"><i class="zmdi zmdi-home"></i>
                                 Films</a></li>
                         <li class="breadcrumb-item"><a href="javascript:void(0);">Client</a></li>
-                        <li class="breadcrumb-item active">Add</li>
+                        <li class="breadcrumb-item active">Edit</li>
                     </ul>
                 </div>
             </div>
@@ -29,7 +29,7 @@
                 <div class="col-md-12">
                     <div class="card">
                         <div class="header">
-                            <h2><strong>Add</strong> Clients</h2>
+                            <h2><strong>Edit</strong> Clients</h2>
                         </div>
 
                         <div class="body">
