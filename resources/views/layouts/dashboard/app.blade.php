@@ -77,6 +77,8 @@
 <script src="{{asset('dashboard_files/light/assets/js/pages/ui/notifications.js')}}"></script> <!-- Custom Js -->
 <script src="{{asset('dashboard_files/light/assets/js/pages/index.js')}}"></script>
 
+<script src="http://unpkg.com/turbolinks"></script>
+
 @if(session('success'))
     <script type="text/javascript">
         $(document).ready(function () {
