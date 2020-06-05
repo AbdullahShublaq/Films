@@ -158,11 +158,17 @@ class FilmController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Film  $film
+     * @param  \App\Film $film
      * @return \Illuminate\Http\Response
+     * @throws \Exception
      */
     public function destroy(Film $film)
     {
         //
+
+        $film->delete();
+
+        session()->flash('success', 'Film Deleted Successfully');
+        return redirect()->route('dashboard.films.index');
     }
 }
