@@ -40,7 +40,7 @@ class FilmController extends Controller
                         ->orWhereIn('name', (array)$request->category);
                 });
             });
-        })->with('categories')->latest()->paginate(10);
+        })->with('categories')->with('ratings')->latest()->paginate(10);
         $categories = Category::all();
 
         return view('dashboard.films.index', compact('films', 'categories'));

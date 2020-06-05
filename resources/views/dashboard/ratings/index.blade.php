@@ -64,7 +64,7 @@
                                         </select>
                                     </div>
                                 </div>
-                                <button type="submit" class="btn btn-primary">Search</button>
+                                <button style="margin-top: 10px" type="submit" class="btn btn-primary">Search</button>
                             </form>
 
                             <div class="tab-content m-t-10">

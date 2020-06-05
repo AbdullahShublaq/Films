@@ -38,6 +38,6 @@ class Film extends Model
 
     public function ratings()
     {
-        return $this->belongsToMany(User::class, 'ratings');
+        return $this->hasMany(Rating::class);
     }
 }

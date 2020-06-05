@@ -6,6 +6,7 @@ use App\Admin;
 use App\Category;
 use App\Film;
 use App\Http\Controllers\Controller;
+use App\Rating;
 use App\User;
 use Illuminate\Http\Request;
 
@@ -17,7 +18,8 @@ class HomeController extends Controller
         $clients = User::count();
         $films = Film::count();
         $categories = Category::count();
+        $ratings = Rating::count();
 
-        return view('dashboard.home', compact('admins', 'clients', 'films', 'categories'));
+        return view('dashboard.home', compact('admins', 'clients', 'films', 'categories', 'ratings'));
     }
 }

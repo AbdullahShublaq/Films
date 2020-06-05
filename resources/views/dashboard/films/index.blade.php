@@ -78,6 +78,7 @@
                                             <th>Poster</th>
                                             <th>Name</th>
                                             <th>Year</th>
+                                            <th>Rate</th>
                                             <th>Categories</th>
                                             <th>Actions</th>
                                         </tr>
@@ -94,6 +95,10 @@
                                                 </td>
                                                 <td><span class="list-name">{{$film->name}}</span></td>
                                                 <td>{{$film->year}}</td>
+                                                <td>
+                                                    <i class="zmdi zmdi-star"></i> {{$film->ratings->avg('rating')}}
+                                                    <a href="{{route('dashboard.ratings.index', ['film' => $film->id])}}"><small style="font-size: 10px">({{$film->ratings->count()}} votes)</small></a>
+                                                </td>
                                                 <td>
                                                     @foreach($film->categories as $category)
                                                         <span class="badge badge-info">{{$category->name}}</span>

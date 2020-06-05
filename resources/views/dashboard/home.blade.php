@@ -54,7 +54,21 @@
                     </div>
                 </div>
             </div>
-
+            <div class="row clearfix">
+                <div class="col-lg-12">
+                    <div class="card">
+                        <ul class="row profile_state list-unstyled">
+                            <li class="col-lg-3 col-md-3 col-6">
+                                <div class="body">
+                                    <i class="zmdi zmdi-star col-yellow"></i>
+                                    <h4>{{$ratings}}</h4>
+                                    <span>Ratings</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
 
         </div>
     </section>
