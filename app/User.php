@@ -53,4 +53,9 @@ class User extends Authenticatable
         return asset($value ? 'storage/' . $value : '/images/default.png');
     }
 
+    public function ratings()
+    {
+        return $this->belongsToMany(Film::class, 'ratings');
+    }
+
 }

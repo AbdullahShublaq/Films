@@ -78,6 +78,16 @@
                         </li>
                     @endif
 
+                    @if(auth()->guard('admin')->user()->hasPermission('read_ratings'))
+                        <li>
+                            <a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-star"></i><span>Ratings</span>
+                            </a>
+                            <ul class="ml-menu">
+                                <li><a href="{{route('dashboard.ratings.index')}}">All Ratings</a></li>
+                            </ul>
+                        </li>
+                    @endif
+
                 </ul>
             </div>
         </div>

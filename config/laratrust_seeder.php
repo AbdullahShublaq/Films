@@ -17,6 +17,7 @@ return [
             'clients' => 'c,r,u,d',
             'films' => 'c,r,u,d',
             'categories' => 'c,r,u,d',
+            'ratings' => 'r,d',
         ],
         'admin' => []
     ],

@@ -85,7 +85,9 @@
                                                 <td>{{$client->first_name . ' ' . $client->last_name}}</td>
                                                 <td>{{$client->email}}</td>
                                                 <td>
-                                                    <a href="{{ route('dashboard.films.index', ['client_id' => $client->id]) }}" class="btn btn-info btn-sm">Ratings</a>
+                                                    <a href="{{ route('dashboard.ratings.index', ['client' => $client->id]) }}" class="btn btn-info btn-sm">Ratings</a>
+                                                    <a href="{{ route('dashboard.films.index', ['client_id' => $client->id]) }}" class="btn btn-info btn-sm">Reviews</a>
+                                                    <a href="{{ route('dashboard.films.index', ['client_id' => $client->id]) }}" class="btn btn-info btn-sm">Favorites</a>
                                                 </td>
                                                 <td>
                                                     @if(auth()->guard('admin')->user()->hasPermission('update_clients'))
