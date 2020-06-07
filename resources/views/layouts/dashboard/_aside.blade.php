@@ -78,6 +78,19 @@
                         </li>
                     @endif
 
+                    @if(auth()->guard('admin')->user()->hasPermission('read_actors'))
+                        <li>
+                            <a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-male"></i><span>Actors</span>
+                            </a>
+                            <ul class="ml-menu">
+                                <li><a href="{{route('dashboard.actors.index')}}">All Actors</a></li>
+                                @if(auth()->guard('admin')->user()->hasPermission('create_actors'))
+                                    <li><a href="{{route('dashboard.actors.create')}}">Add Actors</a></li>
+                                @endif
+                            </ul>
+                        </li>
+                    @endif
+
                     @if(auth()->guard('admin')->user()->hasPermission('read_ratings'))
                         <li>
                             <a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-star"></i><span>Ratings</span>
@@ -94,19 +107,6 @@
                             </a>
                             <ul class="ml-menu">
                                 <li><a href="{{route('dashboard.reviews.index')}}">All Reviews</a></li>
-                            </ul>
-                        </li>
-                    @endif
-
-                    @if(auth()->guard('admin')->user()->hasPermission('read_actors'))
-                        <li>
-                            <a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-male"></i><span>Actors</span>
-                            </a>
-                            <ul class="ml-menu">
-                                <li><a href="{{route('dashboard.actors.index')}}">All Actors</a></li>
-                                @if(auth()->guard('admin')->user()->hasPermission('create_actors'))
-                                    <li><a href="{{route('dashboard.actors.create')}}">Add Actors</a></li>
-                                @endif
                             </ul>
                         </li>
                     @endif
