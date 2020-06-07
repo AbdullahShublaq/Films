@@ -7,6 +7,7 @@ use App\Admin;
 use App\Category;
 use App\Film;
 use App\Http\Controllers\Controller;
+use App\Message;
 use App\Rating;
 use App\Review;
 use App\User;
