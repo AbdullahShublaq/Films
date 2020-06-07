@@ -91,7 +91,7 @@
                         </li>
                     @endif
 
-                    <li class="header">Clients Interaction <small>(3)</small></li>
+                    <li class="header">CLIENTS INTERACTION <small>(3)</small></li>
 
                     @if(auth()->guard('admin')->user()->hasPermission('read_ratings'))
                         <li>
