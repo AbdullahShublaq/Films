@@ -123,6 +123,8 @@
                         </li>
                     @endif
 
+                    <br>
+
                 </ul>
             </div>
         </div>
