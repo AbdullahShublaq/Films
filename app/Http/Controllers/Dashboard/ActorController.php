@@ -149,9 +149,14 @@ class ActorController extends Controller
      *
      * @param  \App\Actor $actor
      * @return \Illuminate\Http\Response
+     * @throws \Exception
      */
     public function destroy(Actor $actor)
     {
         //
+        $actor->delete();
+
+        session()->flash('success', 'Actor Deleted Successfully');
+        return redirect()->route('dashboard.actors.index');
     }
 }

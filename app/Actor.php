@@ -14,8 +14,8 @@ class Actor extends Model
 
     protected static function booted()
     {
-        static::deleting(function (Film $film) {
-            $attributes = $film->getAttributes();
+        static::deleting(function (Actor $actor) {
+            $attributes = $actor->getAttributes();
             Storage::delete($attributes['background_cover']);
             Storage::delete($attributes['avatar']);
         });
