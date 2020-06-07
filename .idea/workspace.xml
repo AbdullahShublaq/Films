@@ -2,27 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8135677f-9e06-4462-aae4-ad1a039ddec5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/dashboard/reviews/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Film.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Film.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/FilmController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/FilmController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/RateController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/RatingController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/laratrust_seeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/laratrust_seeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_06_05_001446_create_film_category_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_06_05_001446_create_film_category_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_06_05_120307_create_ratings_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_06_05_120307_create_ratings_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/UserSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/UserSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/admins/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/admins/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/admins/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/admins/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/clients/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/clients/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/films/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/films/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/films/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/films/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/home.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/ratings/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/ratings/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/dashboard/_aside.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/dashboard/_aside.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/dashboard.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/dashboard.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -64,29 +45,14 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/dashboard/home.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="65" column="56" selection-start-line="65" selection-start-column="56" selection-end-line="65" selection-end-column="56" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/resources/views/dashboard/films/create.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="368">
-              <caret line="76" column="130" selection-start-line="76" selection-start-column="130" selection-end-line="76" selection-end-column="130" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/dashboard/ratings/index.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="529">
-              <caret line="62" column="51" lean-forward="true" selection-start-line="62" selection-start-column="51" selection-end-line="62" selection-end-column="51" />
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="345">
+                <caret line="15" column="28" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -140,7 +106,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/vendor/santigarcor/laratrust/src/Traits/LaratrustUserTrait.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/FilmController.php" />
         <option value="$PROJECT_DIR$/database/migrations/2020_06_04_194447_create_films_table.php" />
         <option value="$PROJECT_DIR$/resources/views/dashboard/clients/edit.blade.php" />
@@ -186,11 +151,12 @@
         <option value="$PROJECT_DIR$/database/migrations/2020_06_07_080359_create_reviews_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2020_06_05_120307_create_ratings_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2020_06_05_001446_create_film_category_table.php" />
-        <option value="$PROJECT_DIR$/resources/views/dashboard/films/index.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Dashboard/HomeController.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/dashboard/_aside.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/dashboard/home.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/dashboard/films/index.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/dashboard/films/create.blade.php" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -313,32 +279,6 @@
               <item name="Films" type="b2602c69:ProjectViewProjectNode" />
               <item name="Films" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="Films" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Films" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Films" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Films" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Films" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Films" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="dashboard" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Films" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Films" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="dashboard" type="462c0819:PsiDirectoryNode" />
-              <item name="films" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -398,12 +338,12 @@
       <workItem from="1591013161650" duration="6217000" />
       <workItem from="1591090851991" duration="70115000" />
       <workItem from="1591298408283" duration="36231000" />
-      <workItem from="1591515757583" duration="9118000" />
+      <workItem from="1591515757583" duration="10042000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="121681000" />
+    <option name="totallyTimeSpent" value="122605000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
@@ -435,20 +375,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/resources/views/dashboard/categories/edit.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="31" column="44" selection-start-line="31" selection-start-column="44" selection-end-line="31" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/dashboard/clients/create.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1697">
-          <caret line="85" column="45" lean-forward="true" selection-start-line="85" selection-start-column="45" selection-end-line="85" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/dashboard/films/edit.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="299">
@@ -760,27 +686,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/dashboard.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="22" selection-start-line="22" selection-end-line="22" />
-          <folding>
-            <element signature="e#7#45#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/dashboard/home.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="65" column="56" selection-start-line="65" selection-start-column="56" selection-end-line="65" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/dashboard/films/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="67" lean-forward="true" selection-start-line="67" selection-end-line="67" />
+        <state relative-caret-position="276">
+          <caret line="60" column="126" selection-start-line="60" selection-start-column="126" selection-end-line="60" selection-end-column="126" />
           <folding>
             <element signature="n#style#0;n#spna#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#textarea#0;n#!!top" expanded="true" />
@@ -797,8 +706,38 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/dashboard/films/create.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="76" column="130" selection-start-line="76" selection-start-column="130" selection-end-line="76" selection-end-column="130" />
+        <state relative-caret-position="506">
+          <caret line="87" column="36" selection-start-line="87" selection-start-column="36" selection-end-line="87" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/dashboard/home.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="65" column="56" selection-start-line="65" selection-start-column="56" selection-end-line="65" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/phpunit.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/dashboard.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="506">
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
+          <folding>
+            <element signature="e#7#45#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="345">
+            <caret line="15" column="28" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>

@@ -8,3 +8,9 @@
 </p>
 
 <hr>
+
+### Setup Steps:
+1.  composer install & composer update 
+1.  add database info in .env
+1.  php artisan migrate --seed
+1.  php artisan storage:link
