@@ -20,5 +20,7 @@ class DatabaseSeeder extends Seeder
         $this->call(RatingSeeder::class);
         $this->call(ReviewSeeder::class);
         $this->call(FavoriteSeeder::class);
+        $this->call(ActorSeeder::class);
+        $this->call(FilmActorSeeder::class);
     }
 }

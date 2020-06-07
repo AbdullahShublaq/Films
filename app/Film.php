@@ -36,6 +36,11 @@ class Film extends Model
         return $this->belongsToMany(Category::class, 'film_category');
     }
 
+    public function actors()
+    {
+        return $this->belongsToMany(Actor::class, 'film_actor');
+    }
+
     public function ratings()
     {
         return $this->hasMany(Rating::class);

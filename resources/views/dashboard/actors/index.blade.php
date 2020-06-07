@@ -10,13 +10,13 @@
         <div class="block-header">
             <div class="row">
                 <div class="col-lg-7 col-md-5 col-sm-12">
-                    <h2>All Clients
+                    <h2>All Actors
                         <small class="text-muted">Welcome to Films</small>
                     </h2>
                 </div>
                 <div class="col-lg-5 col-md-7 col-sm-12">
-                    @if(auth()->guard('admin')->user()->hasPermission('create_clients'))
-                        <a href="{{route('dashboard.clients.create')}}">
+                    @if(auth()->guard('admin')->user()->hasPermission('create_actors'))
+                        <a href="{{route('dashboard.actors.create')}}">
                             <button class="btn btn-primary btn-icon btn-round d-none d-md-inline-block float-right m-l-10"
                                     type="button">
                                 <i class="zmdi zmdi-plus"></i>
@@ -32,8 +32,8 @@
                     <ul class="breadcrumb float-md-right">
                         <li class="breadcrumb-item"><a href="{{url('dashboard')}}"><i class="zmdi zmdi-home"></i> Films</a>
                         </li>
-                        <li class="breadcrumb-item"><a href="javascript:void(0);">Clients</a></li>
-                        <li class="breadcrumb-item active">All Clients</li>
+                        <li class="breadcrumb-item"><a href="javascript:void(0);">Actors</a></li>
+                        <li class="breadcrumb-item active">All Actors</li>
                     </ul>
                 </div>
             </div>
@@ -43,20 +43,21 @@
                 <div class="col-md-12">
                     <div class="card patients-list">
                         <div class="header">
-                            <h2><strong>Clients </strong><span>({{$clients->total()}})</span></h2>
+                            <h2><strong>Actors </strong><span>({{$actors->total()}})</span></h2>
                         </div>
                         <div class="body">
-                            <div class="col-5" style="padding-left: 0px">
-                                <form action="{{ route('dashboard.clients.index') }}" method="GET">
-                                    <div class="input-group" style="margin-bottom: 0px">
-                                        <input type="text" class="form-control" placeholder="Search..."
-                                               name="search" value="{{ request()->search }}">
-                                        <button class="input-group-addon" type="submit">
-                                            <i class="zmdi zmdi-search"></i>
-                                        </button>
+
+                            <form action="{{ route('dashboard.actors.index') }}" method="GET">
+                                <div class="row clearfix">
+                                    <div class="col-5">
+                                        <div class="form-group">
+                                            <input type="text" name="search" class="form-control"
+                                                   placeholder="Search..." value="{{ request()->search }}">
+                                        </div>
                                     </div>
-                                </form>
-                            </div>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Search</button>
+                            </form>
 
                             <div class="tab-content m-t-10">
                                 <div class="tab-pane table-responsive active">
@@ -64,58 +65,51 @@
                                         <thead>
                                         <tr>
                                             <th>Avatar</th>
-                                            <th>UserName</th>
-                                            <th>FullName</th>
-                                            <th>Email</th>
+                                            <th>Name</th>
+                                            <th>DateOfBirth</th>
+                                            <th>Overview</th>
+                                            <th>Biography</th>
                                             <th>Relations</th>
                                             <th>Actions</th>
                                         </tr>
                                         </thead>
                                         <tbody>
-                                        @forelse($clients as $client)
+                                        @forelse($actors as $actor)
                                             <tr>
                                                 <td>
                                                     <span class="list-icon">
-                                                        <img class="patients-img"
-                                                             src="{{$client->avatar}}"
+                                                        <img src="{{$actor->avatar}}"
                                                              alt=""
-                                                             style="width: 50px; height: 50px">
+                                                             style="width: 50px; height: 50px;">
                                                     </span>
                                                 </td>
-                                                <td><span class="list-name">{{$client->username}}</span></td>
-                                                <td>{{$client->first_name . ' ' . $client->last_name}}</td>
-                                                <td>{{$client->email}}</td>
+                                                <td><span class="list-name">{{$actor->name}}</span></td>
+                                                <td>{{date('F d, Y',strtotime($actor->dob))}}</td>
                                                 <td>
-                                                    @if(auth()->guard('admin')->user()->hasPermission('read_ratings'))
-                                                        <a href="{{ route('dashboard.ratings.index', ['client' => $client->id]) }}"
-                                                           class="btn btn-info btn-sm">Ratings</a>
-                                                    @else
-                                                        <button class="btn btn-info btn-sm disabled"
-                                                                style="cursor: no-drop">Ratings
-                                                        </button>
-                                                    @endif
-
-                                                    @if(auth()->guard('admin')->user()->hasPermission('read_reviews'))
-                                                        <a href="{{ route('dashboard.reviews.index', ['client' => $client->id]) }}"
-                                                           class="btn btn-info btn-sm">Reviews</a>
-                                                    @else
-                                                            <button class="btn btn-info btn-sm disabled"
-                                                                    style="cursor: no-drop">Reviews
-                                                            </button>
-                                                    @endif
-
+                                                    <button title="show overview"
+                                                            value="{{$actor->overview}}"
+                                                            class="btn btn-icon btn-neutral btn-icon-mini show_overview">
+                                                        <i class="zmdi zmdi-reader"></i>
+                                                    </button>
+                                                </td>
+                                                <td>
+                                                    <button title="show overview"
+                                                            value="{{$actor->biography}}"
+                                                            class="btn btn-icon btn-neutral btn-icon-mini show_biography">
+                                                        <i class="zmdi zmdi-reader"></i>
+                                                    </button>
+                                                </td>
+                                                <td>
                                                     @if(auth()->guard('admin')->user()->hasPermission('read_films'))
-                                                        <a href="{{ route('dashboard.films.index', ['favorite' => $client->id]) }}"
-                                                           class="btn btn-info btn-sm">Favorites</a>
+                                                        <a href="{{ route('dashboard.films.index', ['actor' => $actor->name]) }}"
+                                                           class="btn btn-info btn-sm">Films</a>
                                                     @else
-                                                        <button class="btn btn-info btn-sm disabled"
-                                                                style="cursor: no-drop">Favorites
-                                                        </button>
+                                                        <button class="btn btn-info btn-sm disabled" style="cursor: no-drop">Films</button>
                                                     @endif
                                                 </td>
                                                 <td>
-                                                    @if(auth()->guard('admin')->user()->hasPermission('update_clients'))
-                                                        <a href="{{route('dashboard.clients.edit', $client)}}">
+                                                    @if(auth()->guard('admin')->user()->hasPermission('update_actors'))
+                                                        <a href="{{route('dashboard.actors.edit', $actor)}}">
                                                             <button class="btn btn-icon btn-neutral btn-icon-mini"
                                                                     title="Edit">
                                                                 <i class="zmdi zmdi-edit"></i>
@@ -129,15 +123,15 @@
                                                         </button>
                                                     @endif
 
-                                                    @if(auth()->guard('admin')->user()->hasPermission('delete_clients'))
-                                                        <form action="{{ route('dashboard.clients.destroy', $client) }}"
+                                                    @if(auth()->guard('admin')->user()->hasPermission('delete_actors'))
+                                                        <form action="{{ route('dashboard.actors.destroy', $actor) }}"
                                                               method="POST" style="display: inline-block">
                                                             @csrf
                                                             @method('DELETE')
 
                                                             <button type="submit"
-                                                                    class="btn btn-icon btn-neutral btn-icon-mini remove_client"
-                                                                    title="Delete" value="{{$client->id}}">
+                                                                    class="btn btn-icon btn-neutral btn-icon-mini remove_actor"
+                                                                    title="Delete" value="{{$actor->id}}">
                                                                 <i class="zmdi zmdi-delete"></i>
                                                             </button>
                                                         </form>
@@ -152,7 +146,7 @@
                                             </tr>
                                         @empty
                                             <tr class="text-center">
-                                                <td colspan="5">There Is No Data...</td>
+                                                <td colspan="6">There Is No Data...</td>
                                             </tr>
                                         @endforelse
                                         </tbody>
@@ -162,7 +156,7 @@
                         </div>
                     </div>
                 </div>
-                {{$clients->appends(request()->query())->links()}}
+                {{$actors->appends(request()->query())->links()}}
             </div>
         </div>
     </section>
@@ -172,14 +166,14 @@
 
         <script type="text/javascript">
             $(document).ready(function () {
-                $(".remove_client").click(function (e) {
+                $(".remove_actor").click(function (e) {
                     var that = $(this);
                     e.preventDefault();
 
                     var id = $(this).val();
                     swal({
                         title: "Are you sure?",
-                        text: "You will not be able to recover this client!",
+                        text: "You will not be able to recover this Actor!",
                         type: "warning",
                         showCancelButton: true,
                         confirmButtonColor: "#DD6B55",
@@ -187,6 +181,24 @@
                         closeOnConfirm: false
                     }, function () {
                         that.closest('form').submit();
+                    });
+                });
+
+                $(".show_overview").click(function () {
+                    var overview = $(this).val();
+                    swal({
+                        title: "<spna style='color: #8CD4F5'>Overview</span>",
+                        text: "<textarea rows='15' class='form-control no-resize' style='background-color: white!important; cursor: auto!important;' readonly>" + overview + "</textarea>",
+                        html: true
+                    });
+                });
+
+                $(".show_biography").click(function () {
+                    var biography = $(this).val();
+                    swal({
+                        title: "<spna style='color: #8CD4F5'>Biography</span>",
+                        text: "<textarea rows='15' class='form-control no-resize' style='background-color: white!important; cursor: auto!important;' readonly>" + biography + "</textarea>",
+                        html: true
                     });
                 });
             });

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Dashboard;
 
+use App\Actor;
 use App\Category;
 use App\Film;
 use App\Http\Controllers\Controller;
@@ -40,6 +41,12 @@ class FilmController extends Controller
                         ->orWhereIn('name', (array)$request->category);
                 });
             });
+            $query->when($request->actor, function ($q) use ($request) {
+                return $q->whereHas('actors', function ($q2) use ($request){
+                    return $q2->whereIn('actor_id', (array)$request->actor)
+                        ->orWhereIn('name', (array)$request->actor);
+                });
+            });
             $query->when($request->favorite, function ($q) use ($request) {
                 return $q->whereHas('favorites', function ($q2) use ($request){
                     return $q2->whereIn('user_id', (array)$request->favorite);
@@ -47,8 +54,9 @@ class FilmController extends Controller
             });
         })->with('categories')->with('ratings')->latest()->paginate(10);
         $categories = Category::all();
+        $actors = Actor::all();
 
-        return view('dashboard.films.index', compact('films', 'categories'));
+        return view('dashboard.films.index', compact('films', 'categories', 'actors'));
     }
 
     /**
@@ -60,7 +68,8 @@ class FilmController extends Controller
     {
         //
         $categories = Category::all();
-        return view('dashboard.films.create', compact('categories'));
+        $actors = Actor::all();
+        return view('dashboard.films.create', compact('categories', 'actors'));
     }
 
     /**
@@ -80,6 +89,7 @@ class FilmController extends Controller
             'poster' => 'required|image',
             'url' => 'required|string',
             'categories' => 'required|array|max:3',
+            'actors' => 'required|array|max:10',
         ]);
 
         $attributes['background_cover'] = $request->background_cover->store('film_background_covers');
@@ -94,6 +104,7 @@ class FilmController extends Controller
             'url' => $attributes['url'],
         ]);
         $film->categories()->sync($attributes['categories']);
+        $film->actors()->sync($attributes['actors']);
 
         session()->flash('success', 'Film Added Successfully');
         return redirect()->route('dashboard.films.index');
@@ -120,7 +131,8 @@ class FilmController extends Controller
     {
         //
         $categories = Category::all();
-        return view('dashboard.films.edit', compact('film', 'categories'));
+        $actors = Actor::all();
+        return view('dashboard.films.edit', compact('film', 'categories', 'actors'));
     }
 
     /**
@@ -141,6 +153,7 @@ class FilmController extends Controller
             'poster' => 'nullable|image',
             'url' => 'required|string',
             'categories' => 'required|array|max:3',
+            'actors' => 'required|array|max:10',
         ]);
 
         if ($request->background_cover) {
@@ -154,6 +167,7 @@ class FilmController extends Controller
 
         $film->update($attributes);
         $film->categories()->sync($attributes['categories']);
+        $film->actors()->sync($attributes['actors']);
 
         session()->flash('success', 'Film Updated Successfully');
         return redirect()->route('dashboard.films.index');

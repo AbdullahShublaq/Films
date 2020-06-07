@@ -36,7 +36,7 @@
                         <div class="body">
                             <form action="{{ route('dashboard.ratings.index') }}" method="GET">
                                 <div class="row clearfix">
-                                    <div class="col-3">
+                                    <div class="col-4">
                                         <select name="client" class="form-control z-index show-tick"
                                                 data-live-search="true">
                                             <option value="" selected>-All Clients-</option>
@@ -45,7 +45,7 @@
                                             @endforeach
                                         </select>
                                     </div>
-                                    <div class="col-3">
+                                    <div class="col-4">
                                         <select name="film" class="form-control z-index show-tick"
                                                 data-live-search="true">
                                             <option value="" selected>-All Films-</option>
@@ -54,7 +54,7 @@
                                             @endforeach
                                         </select>
                                     </div>
-                                    <div class="col-3">
+                                    <div class="col-4">
                                         <select name="rating" class="form-control z-index show-tick"
                                                 data-live-search="true">
                                             <option value="" selected>-All Ratings-</option>

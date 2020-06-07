@@ -109,7 +109,7 @@
                                 </div>
 
                                 @php
-                                    $models = ['admins', 'clients', 'categories', 'films'];
+                                    $models = ['admins', 'clients', 'categories', 'films', 'actors'];
                                     $models2 = ['ratings', 'reviews'];
                                     $cruds = ['create', 'read', 'update', 'delete'];
                                     $cruds2 = ['read', 'delete'];
