@@ -80,6 +80,13 @@
                                     <span>Actors</span>
                                 </div>
                             </li>
+                            <li class="col-lg-3 col-md-3 col-6">
+                                <div class="body">
+                                    <i class="zmdi zmdi-email col-grey"></i>
+                                    <h4>{{$messages}}</h4>
+                                    <span>Messages</span>
+                                </div>
+                            </li>
                         </ul>
                     </div>
                 </div>

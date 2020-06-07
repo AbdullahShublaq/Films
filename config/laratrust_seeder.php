@@ -17,9 +17,10 @@ return [
             'clients' => 'c,r,u,d',
             'films' => 'c,r,u,d',
             'categories' => 'c,r,u,d',
+            'actors' => 'c,r,u,d',
             'ratings' => 'r,d',
             'reviews' => 'r,d',
-            'actors' => 'c,r,u,d',
+            'messages' => 'r,d',
         ],
         'admin' => []
     ],

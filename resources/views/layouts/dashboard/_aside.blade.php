@@ -21,7 +21,7 @@
                             </div>
                         </div>
                     </li>
-                    <li class="header">MAIN</li>
+                    <li class="header">MAIN <small>(6)</small></li>
                     <li class="active open">
                         <a href="{{route('dashboard.home')}}"><i class="zmdi zmdi-home"></i><span>Dashboard</span></a>
                     </li>
@@ -91,6 +91,8 @@
                         </li>
                     @endif
 
+                    <li class="header">Clients Interaction <small>(3)</small></li>
+
                     @if(auth()->guard('admin')->user()->hasPermission('read_ratings'))
                         <li>
                             <a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-star"></i><span>Ratings</span>
@@ -107,6 +109,16 @@
                             </a>
                             <ul class="ml-menu">
                                 <li><a href="{{route('dashboard.reviews.index')}}">All Reviews</a></li>
+                            </ul>
+                        </li>
+                    @endif
+
+                    @if(auth()->guard('admin')->user()->hasPermission('read_messages'))
+                        <li>
+                            <a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-email"></i><span>Messages</span>
+                            </a>
+                            <ul class="ml-menu">
+                                <li><a href="{{route('dashboard.messages.index')}}">All Messages</a></li>
                             </ul>
                         </li>
                     @endif

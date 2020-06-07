@@ -23,7 +23,8 @@ class HomeController extends Controller
         $ratings = Rating::count();
         $reviews = Review::count();
         $actors = Actor::count();
+        $messages = Message::count();
 
-        return view('dashboard.home', compact('admins', 'clients', 'films', 'categories', 'ratings', 'reviews', 'actors'));
+        return view('dashboard.home', compact('admins', 'clients', 'films', 'categories', 'ratings', 'reviews', 'actors', 'messages'));
     }
 }
