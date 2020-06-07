@@ -47,17 +47,17 @@
                         </div>
                         <div class="body">
 
-                            <form action="{{ route('dashboard.actors.index') }}" method="GET">
-                                <div class="row clearfix">
-                                    <div class="col-5">
-                                        <div class="form-group">
-                                            <input type="text" name="search" class="form-control"
-                                                   placeholder="Search..." value="{{ request()->search }}">
-                                        </div>
+                            <div class="col-5" style="padding-left: 0px">
+                                <form action="{{ route('dashboard.admins.index') }}" method="GET">
+                                    <div class="input-group" style="margin-bottom: 0px">
+                                        <input type="text" class="form-control" placeholder="Search..."
+                                               name="search" value="{{ request()->search }}">
+                                        <button class="input-group-addon" type="submit">
+                                            <i class="zmdi zmdi-search"></i>
+                                        </button>
                                     </div>
-                                </div>
-                                <button type="submit" class="btn btn-primary">Search</button>
-                            </form>
+                                </form>
+                            </div>
 
                             <div class="tab-content m-t-10">
                                 <div class="tab-pane table-responsive active">
