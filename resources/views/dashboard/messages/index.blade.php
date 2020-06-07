@@ -10,7 +10,7 @@
         <div class="block-header">
             <div class="row">
                 <div class="col-lg-7 col-md-5 col-sm-12">
-                    <h2>All Admins
+                    <h2>All Messages
                         <small class="text-muted">Welcome to Films</small>
                     </h2>
                 </div>
@@ -28,7 +28,7 @@
                 <div class="col-md-12">
                     <div class="card patients-list">
                         <div class="header">
-                            <h2><strong>Admins </strong><span>({{$messages->total()}})</span></h2>
+                            <h2><strong>Messages </strong><span>({{$messages->total()}})</span></h2>
                         </div>
                         <div class="body">
                             <div class="col-5" style="padding-left: 0px">
