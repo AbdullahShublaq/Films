@@ -8,7 +8,7 @@ use App\Rating;
 use App\User;
 use Illuminate\Http\Request;
 
-class RateController extends Controller
+class RatingController extends Controller
 {
 
     public function __construct()
@@ -107,7 +107,7 @@ class RateController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param $id
+     * @param Rating $rating
      * @return \Illuminate\Http\Response
      * @throws \Exception
      */

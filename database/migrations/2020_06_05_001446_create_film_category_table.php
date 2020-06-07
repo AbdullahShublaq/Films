@@ -21,6 +21,8 @@ class CreateFilmCategoryTable extends Migration
 
             $table->foreign('film_id')->references('id')->on('films')->onDelete('cascade');
             $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
+
+            $table->unique(['film_id', 'category_id']);
         });
     }
 

@@ -61,8 +61,8 @@
                                 </div>
 
                                 <div class="row clearfix">
-                                    <div class="col-sm-6">
-                                        <select class="form-control show-tick" name="categories[]" multiple>
+                                    <div class="col-sm-12">
+                                        <select class="form-control z-index show-tick" name="categories[]" data-live-search="true" multiple>
                                             <option selected disabled>- Select Categories -</option>
                                             @foreach ($categories as $category)
                                                 <option value="{{ $category->id }}">{{ $category->name }}</option>
@@ -71,7 +71,20 @@
                                         <span style="color: red;margin-left: 10px">{{ $errors->first('categories') }}</span>
                                     </div>
                                 </div>
+                                <br>
+                                <div class="row clearfix">
+                                    <div class="col-sm-12">
+                                        <select class="form-control z-index show-tick" name="categories[]" data-live-search="true" multiple>
+                                            <option selected disabled>- Select Casts -</option>
+                                            @foreach ($categories as $category)
+                                                <option value="{{ $category->id }}">{{ $category->name }}</option>
+                                            @endforeach
+                                        </select>
+                                        <span style="color: red;margin-left: 10px">{{ $errors->first('categories') }}</span>
+                                    </div>
+                                </div>
 
+                                <br>
                                 <br>
 
                                 <div class="row clearfix">

@@ -110,7 +110,7 @@
 
                                 @php
                                     $models = ['admins', 'clients', 'categories', 'films'];
-                                    $models2 = ['ratings'];
+                                    $models2 = ['ratings', 'reviews'];
                                     $cruds = ['create', 'read', 'update', 'delete'];
                                     $cruds2 = ['read', 'delete'];
                                 @endphp

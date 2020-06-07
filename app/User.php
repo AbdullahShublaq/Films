@@ -58,4 +58,14 @@ class User extends Authenticatable
         return $this->hasMany(Rating::class);
     }
 
+    public function reviews()
+    {
+        return $this->hasMany(Review::class);
+    }
+
+    public function favorites()
+    {
+        return $this->hasMany(Favorite::class);
+    }
+
 }

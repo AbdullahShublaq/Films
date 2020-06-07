@@ -30,7 +30,8 @@
                         </button>
                     @endif
                     <ul class="breadcrumb float-md-right">
-                        <li class="breadcrumb-item"><a href="{{url('dashboard')}}"><i class="zmdi zmdi-home"></i> Films</a></li>
+                        <li class="breadcrumb-item"><a href="{{url('dashboard')}}"><i class="zmdi zmdi-home"></i> Films</a>
+                        </li>
                         <li class="breadcrumb-item"><a href="javascript:void(0);">Clients</a></li>
                         <li class="breadcrumb-item active">All Clients</li>
                     </ul>
@@ -85,9 +86,33 @@
                                                 <td>{{$client->first_name . ' ' . $client->last_name}}</td>
                                                 <td>{{$client->email}}</td>
                                                 <td>
-                                                    <a href="{{ route('dashboard.ratings.index', ['client' => $client->id]) }}" class="btn btn-info btn-sm">Ratings</a>
-                                                    <a href="{{ route('dashboard.films.index', ['client_id' => $client->id]) }}" class="btn btn-info btn-sm">Reviews</a>
-                                                    <a href="{{ route('dashboard.films.index', ['client_id' => $client->id]) }}" class="btn btn-info btn-sm">Favorites</a>
+                                                    @if(auth()->guard('admin')->user()->hasPermission('read_ratings'))
+                                                        <a href="{{ route('dashboard.ratings.index', ['client' => $client->id]) }}"
+                                                           class="btn btn-info btn-sm">Ratings</a>
+                                                    @else
+                                                        <button class="btn btn-info btn-sm disabled"
+                                                                style="cursor: no-drop">Ratings
+                                                        </button>
+                                                    @endif
+
+                                                    @if(auth()->guard('admin')->user()->hasPermission('read_reviews'))
+                                                        <a href="{{ route('dashboard.reviews.index', ['client' => $client->id]) }}"
+                                                           class="btn btn-info btn-sm">Reviews</a>
+                                                    @else
+                                                            <button class="btn btn-info btn-sm disabled"
+                                                                    style="cursor: no-drop">Reviews
+                                                            </button>
+                                                    @endif
+
+
+                                                    @if(auth()->guard('admin')->user()->hasPermission('read_films'))
+                                                        <a href="{{ route('dashboard.films.index', ['favorite' => $client->id]) }}"
+                                                           class="btn btn-info btn-sm">Favorites</a>
+                                                    @else
+                                                        <button class="btn btn-info btn-sm disabled"
+                                                                style="cursor: no-drop">Favorites
+                                                        </button>
+                                                    @endif
                                                 </td>
                                                 <td>
                                                     @if(auth()->guard('admin')->user()->hasPermission('update_clients'))

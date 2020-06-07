@@ -12,7 +12,7 @@
         <div class="block-header">
             <div class="row">
                 <div class="col-lg-7 col-md-5 col-sm-12">
-                    <h2>All Ratings
+                    <h2>All Reviews
                         <small class="text-muted">Welcome to Films</small>
                     </h2>
                 </div>
@@ -20,8 +20,8 @@
                     <ul class="breadcrumb float-md-right">
                         <li class="breadcrumb-item"><a href="{{url('dashboard')}}"><i class="zmdi zmdi-home"></i> Films</a>
                         </li>
-                        <li class="breadcrumb-item"><a href="javascript:void(0);">Ratings</a></li>
-                        <li class="breadcrumb-item active">All Ratings</li>
+                        <li class="breadcrumb-item"><a href="javascript:void(0);">Reviews</a></li>
+                        <li class="breadcrumb-item active">All Reviews</li>
                     </ul>
                 </div>
             </div>
@@ -31,10 +31,10 @@
                 <div class="col-md-12">
                     <div class="card patients-list">
                         <div class="header">
-                            <h2><strong>Ratings </strong><span>({{$ratings->total()}})</span></h2>
+                            <h2><strong>Reviews </strong><span>({{$reviews->total()}})</span></h2>
                         </div>
                         <div class="body">
-                            <form action="{{ route('dashboard.ratings.index') }}" method="GET">
+                            <form action="{{ route('dashboard.reviews.index') }}" method="GET">
                                 <div class="row clearfix">
                                     <div class="col-3">
                                         <select name="client" class="form-control z-index show-tick"
@@ -54,15 +54,6 @@
                                             @endforeach
                                         </select>
                                     </div>
-                                    <div class="col-3">
-                                        <select name="rating" class="form-control z-index show-tick"
-                                                data-live-search="true">
-                                            <option value="" selected>-All Ratings-</option>
-                                            @for($i = 1; $i <= 10; $i++)
-                                                <option value="{{$i}}" {{request()->rating == $i ? 'selected' : ''}}>{{$i}}</option>
-                                            @endfor
-                                        </select>
-                                    </div>
                                 </div>
                                 <button style="margin-top: 10px" type="submit" class="btn btn-primary">Search</button>
                             </form>
@@ -74,30 +65,36 @@
                                         <tr>
                                             <th>Client</th>
                                             <th>Film</th>
-                                            <th>Rating</th>
+                                            <th>Review</th>
                                             <th>Actions</th>
                                         </tr>
                                         </thead>
                                         <tbody>
-                                        @forelse($ratings as $rating)
+                                        @forelse($reviews as $review)
                                             <tr>
                                                 <td>
-                                                    <a href="{{route('dashboard.clients.index', ['search' => $rating->user->username])}}">{{$rating->user->username}}</a>
+                                                    <a href="{{route('dashboard.clients.index', ['search' => $review->user->username])}}">{{$review->user->username}}</a>
                                                 </td>
                                                 <td>
-                                                    <a href="{{route('dashboard.films.index', ['search' => $rating->film->name])}}">{{$rating->film->name}}</a>
+                                                    <a href="{{route('dashboard.films.index', ['search' => $review->film->name])}}">{{$review->film->name}}</a>
                                                 </td>
-                                                <td><i class="zmdi zmdi-star"></i> {{$rating->rating}}</td>
                                                 <td>
-                                                    @if(auth()->guard('admin')->user()->hasPermission('delete_ratings'))
-                                                        <form action="{{ route('dashboard.ratings.destroy', $rating) }}"
+                                                    <button title="show review"
+                                                            value="{{$review->review}}"
+                                                            class="btn btn-icon btn-neutral btn-icon-mini show_review">
+                                                        <i class="zmdi zmdi-reader"></i>
+                                                    </button>
+                                                </td>
+                                                <td>
+                                                    @if(auth()->guard('admin')->user()->hasPermission('delete_reviews'))
+                                                        <form action="{{ route('dashboard.reviews.destroy', $review) }}"
                                                               method="POST" style="display: inline-block">
                                                             @csrf
                                                             @method('DELETE')
 
                                                             <button type="submit"
-                                                                    class="btn btn-icon btn-neutral btn-icon-mini remove_rate"
-                                                                    title="Delete" value="{{$rating->id}}">
+                                                                    class="btn btn-icon btn-neutral btn-icon-mini remove_review"
+                                                                    title="Delete" value="{{$review->id}}">
                                                                 <i class="zmdi zmdi-delete"></i>
                                                             </button>
                                                         </form>
@@ -122,7 +119,7 @@
                         </div>
                     </div>
                 </div>
-                {{$ratings->appends(request()->query())->links()}}
+                {{$reviews->appends(request()->query())->links()}}
             </div>
         </div>
     </section>
@@ -132,14 +129,14 @@
 
         <script type="text/javascript">
             $(document).ready(function () {
-                $(".remove_rate").click(function (e) {
+                $(".remove_review").click(function (e) {
                     var that = $(this);
                     e.preventDefault();
 
                     var id = $(this).val();
                     swal({
                         title: "Are you sure?",
-                        text: "You will not be able to recover this rate!",
+                        text: "You will not be able to recover this review!",
                         type: "warning",
                         showCancelButton: true,
                         confirmButtonColor: "#DD6B55",
@@ -147,6 +144,15 @@
                         closeOnConfirm: false
                     }, function () {
                         that.closest('form').submit();
+                    });
+                });
+
+                $(".show_review").click(function () {
+                    var review = $(this).val();
+                    swal({
+                        title: "<spna style='color: #8CD4F5'>Review</span>",
+                        text: "<textarea rows='15' class='form-control no-resize' style='background-color: white!important; cursor: auto!important;' readonly>" + review + "</textarea>",
+                        html: true
                     });
                 });
             });

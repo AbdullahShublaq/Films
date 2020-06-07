@@ -54,22 +54,29 @@
                     </div>
                 </div>
             </div>
+
             <div class="row clearfix">
                 <div class="col-lg-12">
                     <div class="card">
                         <ul class="row profile_state list-unstyled">
                             <li class="col-lg-3 col-md-3 col-6">
                                 <div class="body">
-                                    <i class="zmdi zmdi-star col-yellow"></i>
+                                    <i class="zmdi zmdi-star col-amber"></i>
                                     <h4>{{$ratings}}</h4>
                                     <span>Ratings</span>
+                                </div>
+                            </li>
+                            <li class="col-lg-3 col-md-3 col-6">
+                                <div class="body">
+                                    <i class="zmdi zmdi-comment-list col-blush"></i>
+                                    <h4>{{$reviews}}</h4>
+                                    <span>Reviews</span>
                                 </div>
                             </li>
                         </ul>
                     </div>
                 </div>
             </div>
-
         </div>
     </section>
 @endsection

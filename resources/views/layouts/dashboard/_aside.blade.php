@@ -88,6 +88,16 @@
                         </li>
                     @endif
 
+                    @if(auth()->guard('admin')->user()->hasPermission('read_reviews'))
+                        <li>
+                            <a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-comment-list"></i><span>Reviews</span>
+                            </a>
+                            <ul class="ml-menu">
+                                <li><a href="{{route('dashboard.reviews.index')}}">All Reviews</a></li>
+                            </ul>
+                        </li>
+                    @endif
+
                 </ul>
             </div>
         </div>

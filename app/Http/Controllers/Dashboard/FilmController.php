@@ -40,6 +40,11 @@ class FilmController extends Controller
                         ->orWhereIn('name', (array)$request->category);
                 });
             });
+            $query->when($request->favorite, function ($q) use ($request) {
+                return $q->whereHas('favorites', function ($q2) use ($request){
+                    return $q2->whereIn('user_id', (array)$request->favorite);
+                });
+            });
         })->with('categories')->with('ratings')->latest()->paginate(10);
         $categories = Category::all();
 

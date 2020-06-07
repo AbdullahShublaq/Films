@@ -58,7 +58,7 @@
                                         </div>
                                     </div>
                                     <div class="col-3">
-                                        <select name="category" class="form-control show-tick">
+                                        <select name="category" class="form-control z-index show-tick" data-live-search="true">
                                             <option value="">- All Categories -</option>
                                             @foreach($categories as $category)
                                                 <option value="{{$category->id}}" {{request()->category == $category->id ? 'selected' : ''}}>{{$category->name}}</option>
@@ -78,7 +78,8 @@
                                             <th>Poster</th>
                                             <th>Name</th>
                                             <th>Year</th>
-                                            <th>Rate</th>
+                                            <th>Rating</th>
+                                            <th>Overview</th>
                                             <th>Categories</th>
                                             <th>Actions</th>
                                         </tr>
@@ -98,6 +99,13 @@
                                                 <td>
                                                     <i class="zmdi zmdi-star"></i> {{$film->ratings->avg('rating')}}
                                                     <a href="{{route('dashboard.ratings.index', ['film' => $film->id])}}"><small style="font-size: 10px">({{$film->ratings->count()}} votes)</small></a>
+                                                </td>
+                                                <td>
+                                                    <button title="show overview"
+                                                            value="{{$film->overview}}"
+                                                            class="btn btn-icon btn-neutral btn-icon-mini show_overview">
+                                                        <i class="zmdi zmdi-reader"></i>
+                                                    </button>
                                                 </td>
                                                 <td>
                                                     @foreach($film->categories as $category)
@@ -178,6 +186,15 @@
                         closeOnConfirm: false
                     }, function () {
                         that.closest('form').submit();
+                    });
+                });
+
+                $(".show_overview").click(function () {
+                    var overview = $(this).val();
+                    swal({
+                        title: "<spna style='color: #8CD4F5'>Overview</span>",
+                        text: "<textarea rows='15' class='form-control no-resize' style='background-color: white!important; cursor: auto!important;' readonly>" + overview + "</textarea>",
+                        html: true
                     });
                 });
             });

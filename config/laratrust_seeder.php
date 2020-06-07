@@ -18,6 +18,7 @@ return [
             'films' => 'c,r,u,d',
             'categories' => 'c,r,u,d',
             'ratings' => 'r,d',
+            'reviews' => 'r,d',
         ],
         'admin' => []
     ],

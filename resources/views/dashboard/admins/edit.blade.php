@@ -110,16 +110,26 @@
                                 </div>
 
                                 @php
-                                    $models = ['admins', 'clients', 'films'];
+                                    $models = ['admins', 'clients', 'categories', 'films'];
+                                    $models2 = ['ratings', 'reviews'];
                                     $cruds = ['create', 'read', 'update', 'delete'];
+                                    $cruds2 = ['read', 'delete'];
                                 @endphp
 
                                 <div class="row clearfix">
                                     <ul class="nav nav-tabs" id="myTab" role="tablist">
                                         @foreach($models as $index=>$model)
                                             <li class="nav-item">
-                                                <a class="nav-link {{$index==0 ? 'active' : ''}}" data-toggle="tab" href="#{{$model}}"
+                                                <a class="nav-link {{$index==0 ? 'active' : ''}}" data-toggle="tab"
+                                                   href="#{{$model}}"
                                                    role="tab" aria-controls="home" aria-selected="true">{{$model}}</a>
+                                            </li>
+                                        @endforeach
+                                        @foreach($models2 as $index=>$model2)
+                                            <li class="nav-item">
+                                                <a class="nav-link" data-toggle="tab"
+                                                   href="#{{$model2}}"
+                                                   role="tab" aria-controls="home" aria-selected="true">{{$model2}}</a>
                                             </li>
                                         @endforeach
                                     </ul>
@@ -127,12 +137,32 @@
                                 <div class="row clearfix" style="margin-left: 10px">
                                     <div class="tab-content">
                                         @foreach($models as $index=>$model)
-                                            <div class="tab-pane fade show {{ $index==0 ? 'active' : '' }}" id="{{ $model }}" >
+                                            <div class="tab-pane fade show {{ $index==0 ? 'active' : '' }}"
+                                                 id="{{ $model }}">
                                                 <div class="checkbox">
                                                     @foreach($cruds as $crud)
-                                                        <input {{$admin->hasPermission($crud . '_' . $model) ? 'checked' : ''}} id="{{$crud . '_' . $model }}" type="checkbox" name="permissions[]" value="{{$crud . '_' . $model }}">
-                                                        <label style="margin-left: 10px" for="{{$crud . '_' . $model }}">
+                                                        <input {{$admin->hasPermission($crud . '_' . $model) ? 'checked' : ''}} id="{{$crud . '_' . $model }}"
+                                                               type="checkbox" name="permissions[]"
+                                                               value="{{$crud . '_' . $model }}">
+                                                        <label style="margin-left: 10px"
+                                                               for="{{$crud . '_' . $model }}">
                                                             {{$crud}}
+                                                        </label>
+                                                    @endforeach
+                                                </div>
+                                            </div>
+                                        @endforeach
+                                        @foreach($models2 as $index=>$model2)
+                                            <div class="tab-pane fade show"
+                                                 id="{{ $model2 }}">
+                                                <div class="checkbox">
+                                                    @foreach($cruds2 as $crud2)
+                                                        <input {{$admin->hasPermission($crud2 . '_' . $model2) ? 'checked' : ''}} id="{{$crud2 . '_' . $model2 }}"
+                                                               type="checkbox" name="permissions[]"
+                                                               value="{{$crud2 . '_' . $model2 }}">
+                                                        <label style="margin-left: 10px"
+                                                               for="{{$crud2 . '_' . $model2 }}">
+                                                            {{$crud2}}
                                                         </label>
                                                     @endforeach
                                                 </div>
