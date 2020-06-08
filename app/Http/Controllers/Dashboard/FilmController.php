@@ -89,7 +89,7 @@ class FilmController extends Controller
             'poster' => 'required|image',
             'url' => 'required|string',
             'categories' => 'required|array|max:3|exists:categories,id',
-            'actors' => 'required|array|max:10|exists:actors,id',
+            'actors' => 'required|array|max:10|exists:actors,id'
         ]);
 
         $attributes['background_cover'] = $request->background_cover->store('film_background_covers');
@@ -153,7 +153,7 @@ class FilmController extends Controller
             'poster' => 'nullable|image',
             'url' => 'required|string',
             'categories' => 'required|array|max:3|exists:categories,id',
-            'actors' => 'required|array|max:10|exists:actors,id',
+            'actors' => 'required|array|max:10|exists:actors,id'
         ]);
 
         if ($request->background_cover) {
