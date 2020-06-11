@@ -9,7 +9,7 @@ class Review extends Model
     //
     protected $table = 'reviews';
 
-    protected $fillable = ['user_id', 'film_id', 'review'];
+    protected $fillable = ['user_id', 'film_id', 'title', 'review'];
 
     public function user()
     {

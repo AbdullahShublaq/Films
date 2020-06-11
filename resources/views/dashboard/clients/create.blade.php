@@ -85,7 +85,7 @@
                                         </div>
                                         <div>
                                                 <span class="btn btn-dark btn-file">
-                                                    <span class="fileinput-new"> Select Admin Avatar </span>
+                                                    <span class="fileinput-new"> Select Client Avatar </span>
                                                     <span class="fileinput-exists"> Change </span>
                                                     <input type="file" name="avatar"
                                                            value="{{ old('avatar', '') }}">

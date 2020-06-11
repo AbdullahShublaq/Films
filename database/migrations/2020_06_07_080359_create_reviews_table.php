@@ -17,6 +17,7 @@ class CreateReviewsTable extends Migration
             $table->id();
             $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('film_id');
+            $table->string('title');
             $table->string('review');
             $table->timestamps();
 

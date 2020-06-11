@@ -22,6 +22,5 @@ Route::group(['prefix' => 'dashboard', 'namespace' => 'Dashboard'], function () 
         Route::resource('ratings', 'RatingController')->only(['index', 'destroy']);
         Route::resource('reviews', 'ReviewController')->only(['index', 'destroy']);
         Route::resource('messages', 'MessageController')->only(['index', 'destroy']);
-
     });
 });

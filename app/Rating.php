@@ -9,7 +9,7 @@ class Rating extends Model
     //
     protected $table = 'ratings';
 
-    protected $fillable = ['user_id', 'film_id', 'rate'];
+    protected $fillable = ['user_id', 'film_id', 'rating'];
 
     public function user()
     {

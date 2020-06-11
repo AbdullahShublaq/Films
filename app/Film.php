@@ -8,6 +8,8 @@ use Illuminate\Support\Facades\Storage;
 class Film extends Model
 {
     //
+    use favoritable, rateable, reviewable;
+
     protected $table = 'films';
 
     protected $fillable = ['name', 'year', 'overview', 'background_cover', 'poster', 'url'];
