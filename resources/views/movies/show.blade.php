@@ -177,26 +177,7 @@
                                                 <p>{{$film->overview}}</p>
                                                 <hr style="background-color: #405266">
                                                 <br>
-                                                <div class="embed-responsive embed-responsive-16by9">
-                                                    <div itemscope itemtype="https://schema.org/VideoObject">
-                                                        <meta content="Wed Mar 04 2020 09:25:08 GMT+0200 (توقيت شرق أوروبا الرسمي)"
-                                                              itemprop="uploadDate"/>
-                                                        <meta content="Naruto Shippuden Op 4" itemprop="name"/>
-                                                        <meta content="PT1M33.2S" itemprop="duration"/>
-                                                        <meta content="https://content.jwplatform.com/thumbs/g7796nVg-1280.jpg"
-                                                              itemprop="thumbnailUrl"/>
-                                                        <meta content="https://content.jwplatform.com/videos/g7796nVg-zJl9Il4I.mp4"
-                                                              itemprop="contentUrl"/>
-                                                        <div style="position:relative; overflow:hidden; padding-bottom:56.25%">
-                                                            <iframe allowfullscreen
-                                                                    frameborder="0" height="100%" scrolling="auto"
-                                                                    class="jw-state-buffering"
-                                                                    src="https://cdn.jwplayer.com/players/g7796nVg-mBCrmi1a.html"
-                                                                    style="position:absolute;"
-                                                                    title="Naruto Shippuden Op 4" width="100%"></iframe>
-                                                        </div>
-                                                    </div>
-                                                </div>
+                                                {!! $film->url !!}
                                             </div>
 
                                         </div>

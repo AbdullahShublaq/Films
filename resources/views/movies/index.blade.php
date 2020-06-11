@@ -12,7 +12,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="hero-ct">
-                        <h1> movies <span> {{request()->search ? ' : " ' . request()->search . ' "' : ''}}</span></h1>
+                        <h1> movies <span> {{request()->search ? ' : " ' . request()->search . ' "' : ''}} {{request()->category ? ' : " ' . request()->category . ' "' : ''}}</span></h1>
                         <ul class="breadcumb">
                             <li class="active"><a href="/">Home</a></li>
                             <li><span class="ion-ios-arrow-right"></span> movie listing</li>

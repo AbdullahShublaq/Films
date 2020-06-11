@@ -8,9 +8,15 @@ use Illuminate\Http\Request;
 class MovieController extends Controller
 {
     //
-    public function index(){
+    public function index(Request $request){
         //
-        $films = Film::latest()->paginate(10);
+        $films = Film::where(function ($query) use ($request) {
+            $query->when($request->category, function ($q) use ($request) {
+                return $q->whereHas('categories', function ($q2) use ($request){
+                    return $q2->whereIn('name', (array)$request->category);
+                });
+            });
+        })->latest()->paginate(10);
 
         return view('movies.index', compact('films'));
     }

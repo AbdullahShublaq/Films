@@ -63,16 +63,28 @@
         <entry file="file://$PROJECT_DIR$/routes/web.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="547">
-              <caret line="46" column="65" selection-start-line="46" selection-start-column="65" selection-end-line="46" selection-end-column="65" />
+              <caret line="47" column="69" selection-start-line="47" selection-start-column="69" selection-end-line="47" selection-end-column="69" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ReviewController.php">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/HomeController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="524">
-              <caret line="24" column="74" selection-start-line="24" selection-start-column="63" selection-end-line="24" selection-end-column="74" />
+            <state relative-caret-position="196">
+              <caret line="36" column="5" lean-forward="true" selection-start-line="36" selection-start-column="5" selection-end-line="36" selection-end-column="5" />
+              <folding>
+                <element signature="e#40#54#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/MovieController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="276">
+              <caret line="15" column="81" selection-start-line="15" selection-start-column="81" selection-end-line="15" selection-end-column="81" />
               <folding>
                 <element signature="e#40#53#0#PHP" expanded="true" />
               </folding>
@@ -81,22 +93,30 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/reviewable.php">
+        <entry file="file://$PROJECT_DIR$/resources/views/home.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="22" column="32" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="32" />
+            <state relative-caret-position="218">
+              <caret line="64" column="93" selection-start-line="64" selection-start-column="93" selection-end-line="64" selection-end-column="93" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/clients/reviews.blade.php">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/views/movies/show.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="296">
-              <caret line="65" column="53" selection-start-line="65" selection-start-column="53" selection-end-line="65" selection-end-column="53" />
+            <state relative-caret-position="3639">
+              <caret line="178" column="52" selection-start-line="178" selection-start-column="52" selection-end-line="178" selection-end-column="52" />
               <folding>
-                <element signature="e#3092#3402#0#HTML" expanded="true" />
-                <element signature="e#3002#3029#0#HTML" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -113,7 +133,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>remove_admin</find>
       <find>sear</find>
       <find>rates</find>
       <find>client</find>
@@ -143,6 +162,7 @@
       <find>slick</find>
       <find>reviews</find>
       <find>material</find>
+      <find>View A</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -151,7 +171,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/database/migrations/2020_06_07_172955_create_messages_table.php" />
         <option value="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" />
         <option value="$PROJECT_DIR$/database/seeds/MessageSeeder.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Dashboard/MessageController.php" />
@@ -184,7 +203,6 @@
         <option value="$PROJECT_DIR$/app/Favorite.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/RateController.php" />
         <option value="$PROJECT_DIR$/app/Rating.php" />
-        <option value="$PROJECT_DIR$/resources/views/home.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/clients/rates.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/clients/change_password.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/clients/profile.blade.php" />
@@ -193,15 +211,17 @@
         <option value="$PROJECT_DIR$/app/rate.php" />
         <option value="$PROJECT_DIR$/app/Film.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/web/app.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/MovieController.php" />
         <option value="$PROJECT_DIR$/resources/views/auth/login.blade.php" />
-        <option value="$PROJECT_DIR$/routes/web.php" />
         <option value="$PROJECT_DIR$/app/Review.php" />
         <option value="$PROJECT_DIR$/resources/views/clients/ratings.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/movies/show.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/clients/reviews.blade.php" />
         <option value="$PROJECT_DIR$/app/reviewable.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/ReviewController.php" />
+        <option value="$PROJECT_DIR$/routes/web.php" />
+        <option value="$PROJECT_DIR$/resources/views/clients/reviews.blade.php" />
+        <option value="$PROJECT_DIR$/database/seeds/FilmSeeder.php" />
+        <option value="$PROJECT_DIR$/resources/views/home.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/MovieController.php" />
+        <option value="$PROJECT_DIR$/resources/views/movies/show.blade.php" />
       </list>
     </option>
   </component>
@@ -327,11 +347,6 @@
             <path>
               <item name="Films" type="b2602c69:ProjectViewProjectNode" />
               <item name="Films" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Films" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Films" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -409,12 +424,12 @@
       <workItem from="1591515757583" duration="10820000" />
       <workItem from="1591538385730" duration="12640000" />
       <workItem from="1591789359341" duration="9335000" />
-      <workItem from="1591823972740" duration="36408000" />
+      <workItem from="1591823972740" duration="37671000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="181766000" />
+    <option name="totallyTimeSpent" value="183029000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
@@ -446,28 +461,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="291">
-          <caret line="31" column="38" selection-start-line="31" selection-start-column="38" selection-end-line="31" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-14" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/welcome.blade.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Category.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="14" column="5" lean-forward="true" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/movies.blade.php" />
     <entry file="file://$PROJECT_DIR$/resources/views/actors.blade.php" />
     <entry file="file://$PROJECT_DIR$/resources/views/dashboard/films/index.blade.php">
@@ -569,16 +562,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/HomeController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="472">
-          <caret line="65" column="34" selection-start-line="65" selection-start-column="34" selection-end-line="65" selection-end-column="34" />
-          <folding>
-            <element signature="e#40#54#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/routes/dashboard.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
@@ -621,16 +604,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="529">
           <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/home.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="73" column="92" selection-start-line="73" selection-start-column="92" selection-end-line="73" selection-end-column="92" />
-          <folding>
-            <element signature="e#3074#3098#0#HTML" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -733,16 +706,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/MovieController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="19" column="58" selection-start-line="19" selection-start-column="58" selection-end-line="19" selection-end-column="58" />
-          <folding>
-            <element signature="e#40#53#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/auth/login.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="173">
@@ -760,24 +723,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Dashboard/ActorController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="349">
-          <caret line="85" column="64" lean-forward="true" selection-start-line="85" selection-start-column="8" selection-end-line="85" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/layouts/dashboard/app.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="326">
           <caret line="115" column="6" selection-start-line="81" selection-end-line="115" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/web.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="547">
-          <caret line="46" column="65" selection-start-line="46" selection-start-column="65" selection-end-line="46" selection-end-column="65" />
         </state>
       </provider>
     </entry>
@@ -798,32 +747,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/movies/show.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="11" column="16" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/clients/reviews.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
-          <caret line="65" column="53" selection-start-line="65" selection-start-column="53" selection-end-line="65" selection-end-column="53" />
+        <state relative-caret-position="368">
+          <caret line="98" column="59" selection-start-line="98" selection-start-column="59" selection-end-line="98" selection-end-column="59" />
           <folding>
             <element signature="e#3092#3402#0#HTML" expanded="true" />
             <element signature="e#3002#3029#0#HTML" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -838,9 +769,95 @@
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ReviewController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="524">
-          <caret line="24" column="74" selection-start-line="24" selection-start-column="63" selection-end-line="24" selection-end-column="74" />
+          <caret line="24" column="39" selection-start-line="24" selection-start-column="26" selection-end-line="24" selection-end-column="39" />
           <folding>
             <element signature="e#40#53#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2020_06_04_194447_create_films_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="460">
+          <caret line="22" column="32" lean-forward="true" selection-start-line="22" selection-start-column="32" selection-end-line="22" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/seeds/FilmSeeder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="29" column="566" selection-start-line="29" selection-start-column="566" selection-end-line="29" selection-end-column="566" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/HomeController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="36" column="5" lean-forward="true" selection-start-line="36" selection-start-column="5" selection-end-line="36" selection-end-column="5" />
+          <folding>
+            <element signature="e#40#54#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="547">
+          <caret line="47" column="69" selection-start-line="47" selection-start-column="69" selection-end-line="47" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Dashboard/ActorController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="485">
+          <caret line="39" column="35" lean-forward="true" selection-start-line="30" selection-start-column="8" selection-end-line="39" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Dashboard/CategoryController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-305" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Dashboard/FilmController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="313">
+          <caret line="41" column="19" selection-start-line="38" selection-start-column="16" selection-end-line="41" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/MovieController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="15" column="81" selection-start-line="15" selection-start-column="81" selection-end-line="15" selection-end-column="81" />
+          <folding>
+            <element signature="e#40#53#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/home.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="64" column="93" selection-start-line="64" selection-start-column="93" selection-end-line="64" selection-end-column="93" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/movies/show.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3639">
+          <caret line="178" column="52" selection-start-line="178" selection-start-column="52" selection-end-line="178" selection-end-column="52" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
