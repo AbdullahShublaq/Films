@@ -14,3 +14,11 @@
 1.  add database info in .env
 1.  php artisan migrate --seed
 1.  php artisan storage:link
+1. Change (Clients, Films, Actors) Images.
+
+<hr>
+
+### Libraries Used:
+1. Laratrust: For roles & permissions
+
+

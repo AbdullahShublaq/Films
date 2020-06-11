@@ -68,56 +68,14 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/HomeController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="196">
-              <caret line="36" column="5" lean-forward="true" selection-start-line="36" selection-start-column="5" selection-end-line="36" selection-end-column="5" />
-              <folding>
-                <element signature="e#40#54#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/MovieController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="276">
-              <caret line="15" column="81" selection-start-line="15" selection-start-column="81" selection-end-line="15" selection-end-column="81" />
-              <folding>
-                <element signature="e#40#53#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/home.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="218">
-              <caret line="64" column="93" selection-start-line="64" selection-start-column="93" selection-end-line="64" selection-end-column="93" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/resources/views/movies/show.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3639">
-              <caret line="178" column="52" selection-start-line="178" selection-start-column="52" selection-end-line="178" selection-end-column="52" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-              </folding>
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="368">
+                <caret line="16" column="19" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -133,7 +91,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>sear</find>
       <find>rates</find>
       <find>client</find>
       <find>Rate</find>
@@ -163,6 +120,7 @@
       <find>reviews</find>
       <find>material</find>
       <find>View A</find>
+      <find>MOVIE LISTING</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -171,7 +129,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" />
         <option value="$PROJECT_DIR$/database/seeds/MessageSeeder.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Dashboard/MessageController.php" />
         <option value="$PROJECT_DIR$/resources/views/dashboard/messages/index.blade.php" />
@@ -190,7 +147,6 @@
         <option value="$PROJECT_DIR$/database/seeds/ReviewSeeder.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/ActorController.php" />
         <option value="$PROJECT_DIR$/resources/views/actors/show.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/movies/index.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/actors/index.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" />
         <option value="$PROJECT_DIR$/routes/dashboard.php" />
@@ -219,9 +175,11 @@
         <option value="$PROJECT_DIR$/routes/web.php" />
         <option value="$PROJECT_DIR$/resources/views/clients/reviews.blade.php" />
         <option value="$PROJECT_DIR$/database/seeds/FilmSeeder.php" />
+        <option value="$PROJECT_DIR$/resources/views/movies/show.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/home.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/MovieController.php" />
-        <option value="$PROJECT_DIR$/resources/views/movies/show.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/movies/index.blade.php" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -344,24 +302,6 @@
               <item name="Films" type="b2602c69:ProjectViewProjectNode" />
               <item name="Films" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="Films" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Films" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Films" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Films" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Films" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Films" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="movies" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -424,12 +364,12 @@
       <workItem from="1591515757583" duration="10820000" />
       <workItem from="1591538385730" duration="12640000" />
       <workItem from="1591789359341" duration="9335000" />
-      <workItem from="1591823972740" duration="37671000" />
+      <workItem from="1591823972740" duration="39001000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="183029000" />
+    <option name="totallyTimeSpent" value="184359000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
@@ -461,7 +401,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/resources/views/movies.blade.php" />
     <entry file="file://$PROJECT_DIR$/resources/views/actors.blade.php" />
     <entry file="file://$PROJECT_DIR$/resources/views/dashboard/films/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -621,13 +560,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="276">
           <caret line="32" column="60" selection-start-line="32" selection-start-column="60" selection-end-line="32" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/movies/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="34" column="45" selection-start-line="34" selection-start-column="45" selection-end-line="34" selection-end-column="45" />
         </state>
       </provider>
     </entry>
@@ -800,13 +732,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/web.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="547">
-          <caret line="47" column="69" selection-start-line="47" selection-start-column="69" selection-end-line="47" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Dashboard/ActorController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="485">
@@ -826,26 +751,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/MovieController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="15" column="81" selection-start-line="15" selection-start-column="81" selection-end-line="15" selection-end-column="81" />
-          <folding>
-            <element signature="e#40#53#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/home.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="218">
-          <caret line="64" column="93" selection-start-line="64" selection-start-column="93" selection-end-line="64" selection-end-column="93" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/movies/show.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3639">
+        <state relative-caret-position="3608">
           <caret line="178" column="52" selection-start-line="178" selection-start-column="52" selection-end-line="178" selection-end-column="52" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
@@ -859,6 +767,47 @@
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/movies/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="14" column="160" selection-start-line="14" selection-start-column="160" selection-end-line="14" selection-end-column="160" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/home.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="64" column="95" selection-start-line="64" selection-start-column="95" selection-end-line="64" selection-end-column="95" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/MovieController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="15" column="45" selection-start-line="15" selection-start-column="45" selection-end-line="15" selection-end-column="45" />
+          <folding>
+            <element signature="e#40#53#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="547">
+          <caret line="47" column="69" selection-start-line="47" selection-start-column="69" selection-end-line="47" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="368">
+            <caret line="16" column="19" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
