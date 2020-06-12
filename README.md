@@ -15,10 +15,12 @@
 1.  php artisan migrate --seed
 1.  php artisan storage:link
 1. Change (Clients, Films, Actors) Images.
+1. Import (Films.postman_collection.json) in postman to show api links.
 
 <hr>
 
 ### Libraries Used:
 1. Laratrust: For roles & permissions
+1. Passport: For API Authentication
 
 

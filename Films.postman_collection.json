@@ -1,0 +1,164 @@
+{
+	"info": {
+		"_postman_id": "5310445e-0c00-4472-a51c-c3eb74c6b74d",
+		"name": "Films",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/login?email=user@app.com&password=123456",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"login"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "user@app.com"
+						},
+						{
+							"key": "password",
+							"value": "123456"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "categories-index",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNzc4ODdkYzRiYzk0NDEyY2ZkNmRmY2MwNzdmZWNjNGMwM2ZjNGRiZjc4NmE0NjIwNDhlM2JiMWIyZGRhM2ExZjdiNzZkM2FkNjhkNzM5NGYiLCJpYXQiOjE1OTE5NTEzNDUsIm5iZiI6MTU5MTk1MTM0NSwiZXhwIjoxNjIzNDg3MzQ1LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.YepQHKGqsLHjz1QrmeiBavX77jvtuzukMTPGJodrazZcpKdh-_cHMQukNeD8E0-qwobfhIYwI1w97BqNok4UFdiI9cm9PsGswxAezOeJ7TX9Os-OrA_ilUnm9-95chG3Xotyl3GSokP-u2V7MICxThoguvFrS4iUPvjOz4sRhDUUQUBHQCQRdcfbagg-R8RjYWgMvBgLXGRTCDUvgUw329KUz3meOcJYs-0h1FuWIkXGkl_Z1UgWsSzKMk37F4PMiKvOtAd-eQoR8uq8cU90doa4_J6Y1vgUTIiPQZE3AIpASr0ivKVdlxb0fORuLrx8MrEgj_OAtFQMzNY17VpRb484aQzMZQVMKU6L-qsS9gydcbrArOge0LEUdATphe8_BbXsvcm2wNHrmcLlFS7dTgQ8ryvYPuXKkbzfIoMKGamPpU5cvRg2K5_9Pxvyrj09iPFclOLWHZDhrwIOTwxkL8Q_XNU5ncy-w7s4QVezFYHBo3rrb7aIMpkmz3jAqog6GpItPuPglqwruEM-gSDwwKsImhXAWv4cP7eAI0vqWmRm5uWE_k24Hw4mATogchizFisGwWA63Du19_ZqTpQIOXver5mYqPTl-PTN4Lv4tYKTxRKKyI20MoXOcdSsBjkUl0ubaUolD16Nn7WZUmeULxub8xOHtjdyoH3MANX0edU",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/categories",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"categories"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "movies-show",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNzc4ODdkYzRiYzk0NDEyY2ZkNmRmY2MwNzdmZWNjNGMwM2ZjNGRiZjc4NmE0NjIwNDhlM2JiMWIyZGRhM2ExZjdiNzZkM2FkNjhkNzM5NGYiLCJpYXQiOjE1OTE5NTEzNDUsIm5iZiI6MTU5MTk1MTM0NSwiZXhwIjoxNjIzNDg3MzQ1LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.YepQHKGqsLHjz1QrmeiBavX77jvtuzukMTPGJodrazZcpKdh-_cHMQukNeD8E0-qwobfhIYwI1w97BqNok4UFdiI9cm9PsGswxAezOeJ7TX9Os-OrA_ilUnm9-95chG3Xotyl3GSokP-u2V7MICxThoguvFrS4iUPvjOz4sRhDUUQUBHQCQRdcfbagg-R8RjYWgMvBgLXGRTCDUvgUw329KUz3meOcJYs-0h1FuWIkXGkl_Z1UgWsSzKMk37F4PMiKvOtAd-eQoR8uq8cU90doa4_J6Y1vgUTIiPQZE3AIpASr0ivKVdlxb0fORuLrx8MrEgj_OAtFQMzNY17VpRb484aQzMZQVMKU6L-qsS9gydcbrArOge0LEUdATphe8_BbXsvcm2wNHrmcLlFS7dTgQ8ryvYPuXKkbzfIoMKGamPpU5cvRg2K5_9Pxvyrj09iPFclOLWHZDhrwIOTwxkL8Q_XNU5ncy-w7s4QVezFYHBo3rrb7aIMpkmz3jAqog6GpItPuPglqwruEM-gSDwwKsImhXAWv4cP7eAI0vqWmRm5uWE_k24Hw4mATogchizFisGwWA63Du19_ZqTpQIOXver5mYqPTl-PTN4Lv4tYKTxRKKyI20MoXOcdSsBjkUl0ubaUolD16Nn7WZUmeULxub8xOHtjdyoH3MANX0edU",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/movies/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"movies",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "actor-show",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNzc4ODdkYzRiYzk0NDEyY2ZkNmRmY2MwNzdmZWNjNGMwM2ZjNGRiZjc4NmE0NjIwNDhlM2JiMWIyZGRhM2ExZjdiNzZkM2FkNjhkNzM5NGYiLCJpYXQiOjE1OTE5NTEzNDUsIm5iZiI6MTU5MTk1MTM0NSwiZXhwIjoxNjIzNDg3MzQ1LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.YepQHKGqsLHjz1QrmeiBavX77jvtuzukMTPGJodrazZcpKdh-_cHMQukNeD8E0-qwobfhIYwI1w97BqNok4UFdiI9cm9PsGswxAezOeJ7TX9Os-OrA_ilUnm9-95chG3Xotyl3GSokP-u2V7MICxThoguvFrS4iUPvjOz4sRhDUUQUBHQCQRdcfbagg-R8RjYWgMvBgLXGRTCDUvgUw329KUz3meOcJYs-0h1FuWIkXGkl_Z1UgWsSzKMk37F4PMiKvOtAd-eQoR8uq8cU90doa4_J6Y1vgUTIiPQZE3AIpASr0ivKVdlxb0fORuLrx8MrEgj_OAtFQMzNY17VpRb484aQzMZQVMKU6L-qsS9gydcbrArOge0LEUdATphe8_BbXsvcm2wNHrmcLlFS7dTgQ8ryvYPuXKkbzfIoMKGamPpU5cvRg2K5_9Pxvyrj09iPFclOLWHZDhrwIOTwxkL8Q_XNU5ncy-w7s4QVezFYHBo3rrb7aIMpkmz3jAqog6GpItPuPglqwruEM-gSDwwKsImhXAWv4cP7eAI0vqWmRm5uWE_k24Hw4mATogchizFisGwWA63Du19_ZqTpQIOXver5mYqPTl-PTN4Lv4tYKTxRKKyI20MoXOcdSsBjkUl0ubaUolD16Nn7WZUmeULxub8xOHtjdyoH3MANX0edU",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/actors/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"actors",
+						"1"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
