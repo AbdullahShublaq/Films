@@ -17,7 +17,7 @@ class CategoryResource extends JsonResource
         return [
             'id' => $this->id,
             'name' => $this->name,
-            'movies' => MovieResource::collection($this->films()->paginate()),
+            'movies' => MovieResource::collection($this->films()->paginate(10)),
         ];
     }
 }
