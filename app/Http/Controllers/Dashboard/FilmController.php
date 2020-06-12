@@ -88,6 +88,7 @@ class FilmController extends Controller
             'background_cover' => 'required|image',
             'poster' => 'required|image',
             'url' => 'required|string',
+            'api_url' => 'required|string',
             'categories' => 'required|array|max:3|exists:categories,id',
             'actors' => 'required|array|max:10|exists:actors,id'
         ]);
@@ -102,6 +103,7 @@ class FilmController extends Controller
             'background_cover' => $attributes['background_cover'],
             'poster' => $attributes['poster'],
             'url' => $attributes['url'],
+            'api_url' => $attributes['api_url'],
         ]);
         $film->categories()->sync($attributes['categories']);
         $film->actors()->sync($attributes['actors']);
@@ -152,6 +154,7 @@ class FilmController extends Controller
             'background_cover' => 'nullable|image',
             'poster' => 'nullable|image',
             'url' => 'required|string',
+            'api_url' => 'required|string',
             'categories' => 'required|array|max:3|exists:categories,id',
             'actors' => 'required|array|max:10|exists:actors,id'
         ]);

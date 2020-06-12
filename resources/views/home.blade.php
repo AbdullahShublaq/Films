@@ -62,11 +62,13 @@
                     @foreach($categoryFilms as $category)
                         <div class="title-hd">
                             <h2>{{$category->name}}</h2>
-                            <a class="viewall" href="{{url('movies?category=' . $category->name)}}">View all <i class="ion-ios-arrow-right"></i></a>
+                            <a class="viewall" href="{{url('movies?category=' . $category->name)}}">View all <i
+                                        class="ion-ios-arrow-right"></i></a>
                         </div>
                         <div class="tabs">
                             <ul class="tab-links">
-                                <li><span style="color: lightslategray"> {{$category->films->count()}} Movies</span></li>
+                                <li><span style="color: lightslategray"> {{$category->films->count()}} Movies</span>
+                                </li>
                             </ul>
                             <div class="tab-content">
                                 <div class="tab active">

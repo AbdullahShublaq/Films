@@ -97,6 +97,15 @@
                                 <div class="row clearfix">
                                     <div class="col-sm-12">
                                         <div class="form-group">
+                                            <textarea name="overview" rows="4" class="form-control no-resize"
+                                                      placeholder="Film Overview">{{ $film->overview }}</textarea>
+                                            <span style="color: red; margin-left: 10px">{{ $errors->first('overview') }}</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row clearfix">
+                                    <div class="col-sm-12">
+                                        <div class="form-group">
                                             <textarea name="url" rows="4" class="form-control no-resize"
                                                       placeholder="Embed Code From JWPlayer Server">{{ $film->url }}</textarea>
                                             <span style="color: red; margin-left: 10px">{{ $errors->first('url') }}</span>
@@ -106,9 +115,9 @@
                                 <div class="row clearfix">
                                     <div class="col-sm-12">
                                         <div class="form-group">
-                                            <textarea name="overview" rows="4" class="form-control no-resize"
-                                                      placeholder="Film Overview">{{ $film->overview }}</textarea>
-                                            <span style="color: red; margin-left: 10px">{{ $errors->first('overview') }}</span>
+                                            <textarea name="api_url" rows="4" class="form-control no-resize"
+                                                      placeholder="API URL">{{ $film->api_url }}</textarea>
+                                            <span style="color: red; margin-left: 10px">{{ $errors->first('api_url') }}</span>
                                         </div>
                                     </div>
                                 </div>

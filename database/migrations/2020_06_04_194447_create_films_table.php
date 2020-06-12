@@ -21,6 +21,7 @@ class CreateFilmsTable extends Migration
             $table->text('background_cover');
             $table->text('poster');
             $table->text('url');
+            $table->text('api_url');
             $table->timestamps();
         });
     }

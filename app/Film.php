@@ -12,7 +12,7 @@ class Film extends Model
 
     protected $table = 'films';
 
-    protected $fillable = ['name', 'year', 'overview', 'background_cover', 'poster', 'url'];
+    protected $fillable = ['name', 'year', 'overview', 'background_cover', 'poster', 'url', 'api_url'];
 
     protected static function booted()
     {
