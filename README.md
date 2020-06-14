@@ -15,11 +15,13 @@
 1.  php artisan migrate --seed
 1.  php artisan storage:link
 1. Change (Clients, Films, Actors) Images.
+1. php artisan passport:install
 1. Import (Films.postman_collection.json) in postman to show api links.
 
 <hr>
 
-### Libraries Used:
+### Libraries & Services Used:
+1. JWPlayer : For video hosting
 1. Laratrust: For roles & permissions
 1. Passport: For API Authentication
 
