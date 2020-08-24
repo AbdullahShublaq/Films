@@ -9,6 +9,11 @@
 
 <hr>
 
+###Live Demo.
+[URL](http://films-abdullahshublaq.herokuapp.com/)
+
+<hr>
+
 ### Setup Steps:
 1.  composer install & composer update 
 1.  add database info in .env
