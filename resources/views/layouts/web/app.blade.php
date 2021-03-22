@@ -55,7 +55,7 @@
                         <span></span>
                     </div>
                 </div>
-                <a href="index-2.html"><img alt="" class="logo" height="58" src="{{asset('web_files/images/logo1.png')}}" width="119"></a>
+                <a href="/"><img alt="" class="logo" height="58" src="{{asset('web_files/images/logo1.png')}}" width="119"></a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse flex-parent" id="bs-example-navbar-collapse-1">
